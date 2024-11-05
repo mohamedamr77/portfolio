@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolioapp/core/utils/size_config.dart';
 
 double getResponsiveFontSize(
     {required BuildContext context, required double fontSize}) {
@@ -24,11 +25,11 @@ double getScaleFactor({required BuildContext context}) {
 
   if (width <= 400) {
     return width / 500; // Tighter scaling for small phones
-  } else if (width <= 600) {
+  } else if (width <= SizeConfig.mobileSize) {
     return width / 500;
-  } else if (width <= 900) {
+  } else if (width <= SizeConfig.tabletSize) {
     return width / 1000;
   } else {
-    return width / 1920; // Slightly larger screens have larger base
+    return width / 1800; // Slightly larger screens have larger base
   }
 }
