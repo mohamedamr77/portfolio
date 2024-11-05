@@ -39,6 +39,12 @@ class AppSharedColors {
 
 
 ThemeData darkMode = ThemeData.dark().copyWith(
+  buttonTheme: const ButtonThemeData(
+    buttonColor: AppSharedColors.accentOrange,
+  ),
+   appBarTheme: const AppBarTheme(
+     backgroundColor: AppDarkModeColors.scaffoldBackGround,
+   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     backgroundColor: AppDarkModeColors.scaffoldBackGround,
   ),
@@ -50,6 +56,12 @@ ThemeData darkMode = ThemeData.dark().copyWith(
 );
 
 ThemeData lightMode = ThemeData.light().copyWith(
+  buttonTheme: const ButtonThemeData(
+    buttonColor: AppSharedColors.accentOrange,
+  ),
+  appBarTheme: const AppBarTheme(
+    color: AppLightModeColors.whiteBackground,
+  ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     backgroundColor: AppLightModeColors.whiteBackground,
   ),

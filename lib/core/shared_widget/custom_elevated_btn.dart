@@ -4,7 +4,7 @@ import 'package:portfolioapp/core/extentions/screen_size.dart';
 class CustomElevatedButton extends StatelessWidget {
   final VoidCallback onPress;
   final Widget child;
-  final Color btnColor;
+  final Color? btnColor;
   final double? width;
   final double? height;
   final BorderSide? borderSide;
@@ -13,7 +13,7 @@ class CustomElevatedButton extends StatelessWidget {
       {super.key,
       required this.onPress,
       required this.child,
-      required this.btnColor,
+       this.btnColor,
       this.width,
       this.height,
       this.borderSide});
