@@ -1,0 +1,30 @@
+class AppText {
+  static const String home = "Home";
+  static const String aboutMe = "About Me";
+  static const String services = "Services";
+  static const String projects = "Projects";
+  static const String testimonials = "Testimonials";
+  static const String contact = "Contact";
+  static const String myProjects = "My Projects";
+  static const String tabletDesign = "Tablet Design";
+  static const String uiUx = "UI/UX";
+  static const String webDesign = "Web Design";
+  static const String description1 = "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium";
+  static const String graphicDesign = "Graphic Design";
+  static const String appDesign = "App Design";
+  static const String ux = "UX";
+  static const String description2 = "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra";
+  static const String hiIam = "Hi I am";
+  static const String downloadCv = "Download CV";
+  static const String testimonialsSection = "Testimonials";
+  static const String projectsSection = "Projects";
+  static const String allProjects = "All";
+  static const String ecomWebPageDesign = "Ecom Web Page Design";
+  static const String businessLandingPageDesign = "Business Landing Page Design";
+  static const String airCallingLandingPageDesign = "AirCalling Landing Page Design";
+  static const String designTogether = "Let's Design Together";
+  static const String enterYourEmail = "Enter Your Email";
+  static const String hireMe = "Hire Me";
+  static const String name = "Mohamed Amr";
+  static const String profession = "Flutter developer";
+}
