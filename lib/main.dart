@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 theme: lightMode,
                 darkTheme: darkMode,
-                themeMode: BlocProvider.of<GetThemeCubit>(context).isDark
+                themeMode: Hive.box(BoxApp.kThemeBox).get('isDark')
                     ? ThemeMode.dark
                     : ThemeMode.light,
                 navigatorKey: NavigationManager.navigationKey,
