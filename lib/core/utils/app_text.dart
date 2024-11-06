@@ -27,4 +27,6 @@ class AppText {
   static const String hireMe = "Hire Me";
   static const String name = "Mohamed Amr";
   static const String profession = "Flutter developer";
+  static const String developer = "Developer";
+  static const String flutter = "Flutter";
 }

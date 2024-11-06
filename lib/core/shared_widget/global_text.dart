@@ -4,7 +4,7 @@ import 'package:portfolioapp/core/utils/font_size_responsize.dart';
 import '../shared_functions/shared_functions.dart';
 
 class GText extends StatelessWidget {
-  final Color color;
+  final Color? color;
   final String content;
   final double fontSize;
   final FontWeight? fontWeight;
@@ -19,7 +19,7 @@ class GText extends StatelessWidget {
 
   const GText({
     super.key,
-    required this.color,
+     this.color,
     required this.content,
     required this.fontSize,
     this.textDirection,
@@ -45,7 +45,7 @@ class GText extends StatelessWidget {
         fontSize: getResponsiveFontSize(context: context, fontSize: fontSize),
         overflow: overflow,
         decoration: textDecoration,
-        color: color,
+        color: color ?? Theme.of(context).primaryColor,
         decorationColor: decorationColor,
         decorationThickness: decorationThickness,
         fontFamily: SharedFunctions.determineFontFamily(content),
