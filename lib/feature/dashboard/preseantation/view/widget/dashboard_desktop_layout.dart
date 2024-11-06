@@ -10,6 +10,7 @@ class DashboardDesktopLayout extends StatelessWidget {
     return const Column(
       children: [
         IntroductionSection(),
+
       ],
     );
   }
