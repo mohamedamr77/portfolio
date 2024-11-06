@@ -5,7 +5,7 @@ class AppLightModeColors {
   static Color semiTransparentBlack = const Color(0xff000000).withOpacity(0.5); // Semi-transparent black
   static Color lightTransparentBlack = const Color(0xff000000).withOpacity(0.2); // Light transparent black
   static const Color darkGreenGray = Color(0xff61706F); // Dark Green-Gray
-  static const Color lightGrayishWhite = Color(0xffFF8F8F8); // Light Grayish-White
+  static const Color lightGrayishWhite = Color(0xffff8f8f8); // Light Grayish-White
   static const Color whiteBackground = Color(0xffFFFFFF); // Pure White Background
   static const Color steelGray = Color(0xff777A7E); // Steel Gray
   static Color lightBlue = const Color(0xff52ADFC).withOpacity(0.25); // Light Blue with Opacity

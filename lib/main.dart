@@ -9,14 +9,22 @@ import 'core/navigation/routes.dart';
 import 'core/utils/const_box.dart';
 import 'core/utils/const_variables.dart';
 import 'feature/dashboard/preseantation/view/dashboard_screen.dart';
+import 'feature/dashboard/preseantation/view_model/dashboard_controller/dashboard_cubit.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   await Hive.openBox(BoxApp.kThemeBox);
 
-  runApp(BlocProvider(
-    create: (context) => GetThemeCubit(),
+  runApp(MultiBlocProvider(
+    providers: [
+      BlocProvider(
+        create: (context) => GetThemeCubit(),
+      ),
+      BlocProvider(
+        create: (context) => DashboardCubit(),
+      ),
+    ],
     child: const MyApp(),
   ));
 }
@@ -37,9 +45,7 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 theme: lightMode,
                 darkTheme: darkMode,
-                themeMode: BlocProvider
-                    .of<GetThemeCubit>(context)
-                    .isDark
+                themeMode: BlocProvider.of<GetThemeCubit>(context).isDark
                     ? ThemeMode.dark
                     : ThemeMode.light,
                 navigatorKey: NavigationManager.navigationKey,

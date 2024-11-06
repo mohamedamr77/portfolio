@@ -42,7 +42,7 @@ class GText extends StatelessWidget {
       textDirection: textDirection,
       maxLines: maxLines,
       style: TextStyle(
-        fontSize: fontSize,
+        fontSize: getResponsiveFontSize(context: context, fontSize: fontSize),
         overflow: overflow,
         decoration: textDecoration,
         color: color,
