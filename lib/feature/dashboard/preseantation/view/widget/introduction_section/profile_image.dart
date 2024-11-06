@@ -17,14 +17,13 @@ class ProfileImage extends StatelessWidget {
       builder: (context, state) {
         return Image(
           image: AssetImage(
-            Hive.box(BoxApp.kThemeBox).get('isDark') == true
-                || BlocProvider
-                .of<GetThemeCubit>(context)
-                .isDark ? AppImages.moAmrCircleBlack
+            Hive.box(BoxApp.kThemeBox).get('isDark') == true ||
+                    BlocProvider.of<GetThemeCubit>(context).isDark
+                ? AppImages.moAmrCircleBlack
                 : AppImages.moAmrCircleWhite,
           ),
           height: 0.42.h,
-          width: MediaQuery.sizeOf(context).width*0.2,
+          width: MediaQuery.sizeOf(context).width * 0.2,
         );
       },
     );

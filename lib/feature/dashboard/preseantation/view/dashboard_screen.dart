@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/app_bar/custom_app_bar.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/dashboard_body.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -10,7 +9,6 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(),
       body: DashboardBody(),
     );
   }

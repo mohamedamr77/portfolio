@@ -13,10 +13,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return MediaQuery.of(context).size.width > SizeConfig.desktopSize
-        ? AppBar(
-            leading: const ButtonSwitchTheme(),
-            title: const ListAppBarServiceItem(),
+        ? const ListTile(
+            leading: ButtonSwitchTheme(),
+            title: ListAppBarServiceItem(),
           )
-        : AppBar();
+        : const SizedBox.shrink();
   }
 }

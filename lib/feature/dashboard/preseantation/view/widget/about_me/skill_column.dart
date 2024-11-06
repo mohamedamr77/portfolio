@@ -14,13 +14,25 @@ class SkillColumn extends StatelessWidget {
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomTitleWithSlider(title: AppText.flutter, value: 90,),
-          SizedBox(height: 10,),
-          CustomTitleWithSlider(title: AppText.flutter, value: 90,),
-          SizedBox(height: 10,),
-          CustomTitleWithSlider(title: AppText.flutter, value: 90,),
+          CustomTitleWithSlider(
+            title: AppText.flutter,
+            value: 90,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          CustomTitleWithSlider(
+            title: AppText.flutter,
+            value: 90,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          CustomTitleWithSlider(
+            title: AppText.flutter,
+            value: 90,
+          ),
         ],
-
       ),
     );
   }
