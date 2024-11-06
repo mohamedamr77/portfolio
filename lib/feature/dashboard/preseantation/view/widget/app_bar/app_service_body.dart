@@ -15,7 +15,7 @@ class AppBarServiceItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: 0.01.w),
+      padding: EdgeInsets.only(right: 0.015.w),
       child: CustomElevatedButton(
         borderRadius: BorderRadius.circular(8),
         btnColor:
