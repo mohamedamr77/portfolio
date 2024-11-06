@@ -9,9 +9,9 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: customAppBar(context),
-      body: const DashboardBody(),
+    return const Scaffold(
+      appBar:CustomAppBar(),
+      body: DashboardBody(),
     );
   }
 }
