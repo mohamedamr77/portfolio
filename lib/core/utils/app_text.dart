@@ -10,10 +10,10 @@ class AppText {
   static const String uiUx = "UI/UX";
   static const String webDesign = "Web Design";
   static const String description1 = "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium";
+  static const String description2 = "Specializing in cross-platform mobile apps with Flutter, I focus on delivering high-quality, user-centric solutions. Passionate about clean code and performance, I bring creative ideas to life through technology.";
   static const String graphicDesign = "Graphic Design";
   static const String appDesign = "App Design";
   static const String ux = "UX";
-  static const String description2 = "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra";
   static const String hiIam = "Hi I am";
   static const String downloadCv = "Download CV";
   static const String testimonialsSection = "Testimonials";

@@ -24,7 +24,7 @@ class ProfileImage extends StatelessWidget {
                 : AppImages.moAmrCircleWhite,
           ),
           height: 0.42.h,
-          width: 0.2.w,
+          width: MediaQuery.sizeOf(context).width*0.2,
         );
       },
     );
