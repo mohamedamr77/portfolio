@@ -9,7 +9,8 @@ class AppText {
   static const String tabletDesign = "Tablet Design";
   static const String uiUx = "UI/UX";
   static const String webDesign = "Web Design";
-  static const String description1 = "Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium";
+  static const String desktopDesign = "desktop Design";
+  static const String description1 = "I offer a range of services designed to bring your digital ideas to life. Whether you're building a startup or enhancing an existing product, my expertise ensures a seamless and impactful experience for your users.";
   static const String description2 = "Specializing in cross-platform mobile apps with Flutter, I focus on delivering high-quality, user-centric solutions. Passionate about clean code and performance, I bring creative ideas to life through technology.";
   static const String graphicDesign = "Graphic Design";
   static const String appDesign = "App Design";

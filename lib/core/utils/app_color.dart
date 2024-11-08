@@ -31,6 +31,7 @@ class AppSharedColors {
   static const Color subtleGray = Color(0xffD9D9D9);
   static const Color deepBlack = Color(0xff1E1E1E);
   static const Color darkCharcoal = Color(0xff424242);
+  static const Color lightGray = Color(0xffF8F8F8); // Light Gray
   static const Color peachBackground = Color(0xffFFEBDB);
   static const Color neutralGray = Color(0xffAFAFAF);
   static const Color mutedGray = Color(0xff797979);
