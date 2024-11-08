@@ -39,14 +39,18 @@ class ServiceSection extends StatelessWidget {
                          children: [
                            const SizedBox(height: 40,),
                            imageService(image: servicesList[index].image),
-                           GText(
-                             color: Theme.of(context).scaffoldBackgroundColor,
-                             content: servicesList[index].title , fontSize: 32 , fontWeight: FontWeight.w600,),
-                           const SizedBox(height: 17,),
+                           const SizedBox(height: 20,),
+                           FittedBox(
+                             fit: BoxFit.scaleDown,
+                             child: GText(
+                               color: Theme.of(context).scaffoldBackgroundColor,
+                               content: servicesList[index].title , fontSize: 32 , fontWeight: FontWeight.w600,),
+                           ),
+                           // const SizedBox(height: ,),
                            GText(
                                color: Theme.of(context).scaffoldBackgroundColor,
                                content: servicesList[index].description , fontSize: 19 , fontWeight: FontWeight.w400),
-                           const SizedBox(height: 40,),
+                           const SizedBox(height: 20,),
                          ],
                       ),
                    ),
@@ -63,6 +67,6 @@ class ServiceSection extends StatelessWidget {
 
  imageService({required String image}){
   return image.contains(".svg")?
-      SvgPicture.asset(image,) :
+      SvgPicture.asset(image, width: 72,height: 82) :
       Image.asset(image, width: 72,height: 82,);
 }
