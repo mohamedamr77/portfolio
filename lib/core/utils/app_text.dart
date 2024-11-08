@@ -11,7 +11,6 @@ class AppText {
   static const String toDoApp = "ToDo App";
   static const String newsApp = "News App";
   static const String dashboardApp = "DashBoard App";
-  static const String digitalTransactionApp = "DigitalTransaction App";
   static const String thePerfectBodyApp = "The perfect body";
   static const String currenciesApp = "currencies";
   static const String myProjects = "My Projects";

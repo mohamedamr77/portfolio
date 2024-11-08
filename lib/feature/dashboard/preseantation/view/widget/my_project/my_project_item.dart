@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/core/extentions/screen_size.dart';
+import 'package:portfolioapp/core/utils/app_images.dart';
 import '../../../../../../core/shared_widget/global_text.dart';
 import '../../../../../../core/utils/app_color.dart';
 import '../../../../../../core/utils/app_text.dart';
@@ -19,7 +20,7 @@ class MyProjectItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             child: Image(
               image: const AssetImage(
-                "assets/images/quiz_app.jpg",
+                AppImages.perfectBody,
               ),
               height: 0.28.h,
             ),
@@ -29,7 +30,7 @@ class MyProjectItem extends StatelessWidget {
           ),
           const GText(
             color: AppSharedColors.accentOrange,
-            content: AppText.quizApp,
+            content: AppText.thePerfectBodyApp,
             fontSize: 24,
             fontWeight: FontWeight.w700,
           ),
@@ -40,7 +41,7 @@ class MyProjectItem extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   backgroundColor: AppSharedColors.accentOrange),
               onPressed: () {},
-              child: GText(content: "See Project", fontSize: 19)),
+              child: const GText(content: "See Project", fontSize: 19)),
         ],
       ),
     );
