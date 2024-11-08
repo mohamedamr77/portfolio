@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../shared_functions/shared_functions.dart';
@@ -46,44 +45,43 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      onSaved: onSaved,
-      controller: controller,
-      obscureText: obscureText,
-      obscuringCharacter: "*",
-      initialValue: initialValue,
-      onChanged: onChanged,
-      validator: validator,
-      keyboardType: keyboardType,
-      maxLines: maxLine,
-      minLines: minLine,
-      onTapOutside: (e) {
-        FocusManager.instance.primaryFocus?.unfocus();
-      },
-      style: TextStyle(
-        // color: AppColor.primaryColor,
-        fontSize: getResponsiveFontSize(context: context, fontSize: 16),
-        fontWeight: FontWeight.w400,
-        fontFamily: "Montserrat",
-      ),
-      decoration: InputDecoration(
-        fillColor: fillColor ?? const Color(0xffFAFAFA),
-        hintText: hintText,
-        hintStyle: TextStyle(
-            fontFamily: SharedFunctions.determineFontFamily(hintText),
-            // color: AppColor.greyColor,
-            fontSize: getResponsiveFontSize(context: context, fontSize: 16)),
-        border: const OutlineInputBorder(),
-        prefixIcon: prefix,
-        suffixIcon: suffixIcon,
-      focusedBorder: focusBorder,
-      //   focusedBorder: focusBorder ??
-      //       const OutlineInputBorder(
-      //           // borderSide: BorderSide(color: AppColor.primaryColor)),
-      //   enabledBorder: enabledBorder ??
-      //       const OutlineInputBorder(
-      //           borderSide: BorderSide(width: 3, color: Color(0xffFAFAFA))),
-      // ),
-      )
-    );
+        onSaved: onSaved,
+        controller: controller,
+        obscureText: obscureText,
+        obscuringCharacter: "*",
+        initialValue: initialValue,
+        onChanged: onChanged,
+        validator: validator,
+        keyboardType: keyboardType,
+        maxLines: maxLine,
+        minLines: minLine,
+        onTapOutside: (e) {
+          FocusManager.instance.primaryFocus?.unfocus();
+        },
+        style: TextStyle(
+          // color: AppColor.primaryColor,
+          fontSize: getResponsiveFontSize(context: context, fontSize: 16),
+          fontWeight: FontWeight.w400,
+          fontFamily: "Montserrat",
+        ),
+        decoration: InputDecoration(
+          fillColor: fillColor ?? const Color(0xffFAFAFA),
+          hintText: hintText,
+          hintStyle: TextStyle(
+              fontFamily: SharedFunctions.determineFontFamily(hintText),
+              // color: AppColor.greyColor,
+              fontSize: getResponsiveFontSize(context: context, fontSize: 16)),
+          border: const OutlineInputBorder(),
+          prefixIcon: prefix,
+          suffixIcon: suffixIcon,
+          focusedBorder: focusBorder,
+          //   focusedBorder: focusBorder ??
+          //       const OutlineInputBorder(
+          //           // borderSide: BorderSide(color: AppColor.primaryColor)),
+          //   enabledBorder: enabledBorder ??
+          //       const OutlineInputBorder(
+          //           borderSide: BorderSide(width: 3, color: Color(0xffFAFAFA))),
+          // ),
+        ));
   }
 }

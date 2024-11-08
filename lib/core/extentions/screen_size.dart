@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../utils/const_variables.dart';
 
-
-
 extension EmptyPadding on num {
   SizedBox get ph => SizedBox(
         height: this * ht,

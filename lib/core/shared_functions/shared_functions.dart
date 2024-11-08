@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../navigation/navigation_manager.dart';
 
-
 class SharedFunctions {
   // static NetworkInfoImpl networkInfo = NetworkInfoImpl.getInstance();
 

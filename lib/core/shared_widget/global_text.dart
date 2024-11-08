@@ -19,7 +19,7 @@ class GText extends StatelessWidget {
 
   const GText({
     super.key,
-     this.color,
+    this.color,
     required this.content,
     required this.fontSize,
     this.textDirection,

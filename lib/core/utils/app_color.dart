@@ -2,24 +2,32 @@ import 'package:flutter/material.dart';
 
 class AppLightModeColors {
   static const Color primaryTextColor = Color(0xff000000);
-  static Color semiTransparentBlack = const Color(0xff000000).withOpacity(0.5); // Semi-transparent black
-  static Color lightTransparentBlack = const Color(0xff000000).withOpacity(0.2); // Light transparent black
+  static Color semiTransparentBlack =
+      const Color(0xff000000).withOpacity(0.5); // Semi-transparent black
+  static Color lightTransparentBlack =
+      const Color(0xff000000).withOpacity(0.2); // Light transparent black
   static const Color darkGreenGray = Color(0xff61706F); // Dark Green-Gray
-  static const Color lightGrayishWhite = Color(0xffff8f8f8); // Light Grayish-White
-  static const Color whiteBackground = Color(0xffFFFFFF); // Pure White Background
+  static const Color lightGrayishWhite =
+      Color(0xffff8f8f8); // Light Grayish-White
+  static const Color whiteBackground =
+      Color(0xffFFFFFF); // Pure White Background
   static const Color steelGray = Color(0xff777A7E); // Steel Gray
-  static Color lightBlue = const Color(0xff52ADFC).withOpacity(0.25); // Light Blue with Opacity
+  static Color lightBlue =
+      const Color(0xff52ADFC).withOpacity(0.25); // Light Blue with Opacity
 }
 
 class AppDarkModeColors {
   static const Color primaryTextColor = Color(0xffffffff);
   static const Color scaffoldBackGround = Color(0xff1E1E1E);
   static const Color blackColor = Color(0xff000000);
-  static const Color backgroundLightGray = Color(0xffFAFAFA); // Very Light Background
+  static const Color backgroundLightGray =
+      Color(0xffFAFAFA); // Very Light Background
   static const Color lightGray = Color(0xffF8F8F8); // Light Gray
-  static Color overlayBlack = const Color(0xff000000).withOpacity(0.2); // Black Overlay
+  static Color overlayBlack =
+      const Color(0xff000000).withOpacity(0.2); // Black Overlay
   static const Color brightBlue = Color(0xff52ADFC); // Bright Blue
-  static const Color softPinkBackground = Color(0xffFFF8F8); // Soft Pink Background
+  static const Color softPinkBackground =
+      Color(0xffFFF8F8); // Soft Pink Background
   static const Color transparentBlack = Color(0xff121212); // Transparent Black
 }
 
@@ -37,15 +45,13 @@ class AppSharedColors {
   static const Color mutedGray = Color(0xff797979);
 }
 
-
-
 ThemeData darkMode = ThemeData.dark().copyWith(
   buttonTheme: const ButtonThemeData(
     buttonColor: AppSharedColors.accentOrange,
   ),
-   appBarTheme: const AppBarTheme(
-     backgroundColor: AppDarkModeColors.scaffoldBackGround,
-   ),
+  appBarTheme: const AppBarTheme(
+    backgroundColor: AppDarkModeColors.scaffoldBackGround,
+  ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     backgroundColor: AppDarkModeColors.scaffoldBackGround,
   ),
@@ -66,9 +72,9 @@ ThemeData lightMode = ThemeData.light().copyWith(
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     backgroundColor: AppLightModeColors.whiteBackground,
   ),
-  scaffoldBackgroundColor:  AppLightModeColors.whiteBackground,
+  scaffoldBackgroundColor: AppLightModeColors.whiteBackground,
   primaryColor: AppLightModeColors.primaryTextColor,
-  textTheme:  const TextTheme(
+  textTheme: const TextTheme(
     displayLarge: TextStyle(color: AppLightModeColors.primaryTextColor),
   ),
 );
@@ -93,10 +99,6 @@ ThemeData lightMode = ThemeData.light().copyWith(
 //   secondaryHeaderColor: AppLightModeColors.secondaryHeaderColorLight,
 //   canvasColor: AppLightModeColors.canvasColorLight,
 // );
-
-
-
-
 
 /*
 class AppLightModeColors {

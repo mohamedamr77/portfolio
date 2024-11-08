@@ -7,7 +7,7 @@ class ImageAndSocialIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         ProfileImage(),
