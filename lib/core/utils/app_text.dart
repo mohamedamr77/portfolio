@@ -5,6 +5,15 @@ class AppText {
   static const String projects = "Projects";
   static const String testimonials = "Testimonials";
   static const String contact = "Contact";
+  static const String quizApp = "Quiz App";
+  static const String cafeApp = "cafe App";
+  static const String bookApp = "Bookly App";
+  static const String toDoApp = "ToDo App";
+  static const String newsApp = "News App";
+  static const String dashboardApp = "DashBoard App";
+  static const String digitalTransactionApp = "DigitalTransaction App";
+  static const String thePerfectBodyApp = "The perfect body";
+  static const String currenciesApp = "currencies";
   static const String myProjects = "My Projects";
   static const String tabletDesign = "Tablet Design";
   static const String uiUx = "UI/UX";
@@ -15,6 +24,8 @@ class AppText {
   static const String description2 =
       "Specializing in cross-platform mobile apps with Flutter, I focus on delivering high-quality, user-centric solutions. Passionate about clean code and performance, I bring creative ideas to life through technology.";
   static const String graphicDesign = "Graphic Design";
+  static const String descriptionProject = "I have developed a diverse range of applications, leveraging Flutter to create dynamic, user-focused experiences";
+
   static const String appDesign = "App Design";
   static const String ux = "UX";
   static const String hiIam = "Hi I am";
