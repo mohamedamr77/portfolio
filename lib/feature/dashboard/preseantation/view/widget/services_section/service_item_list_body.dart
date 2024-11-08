@@ -32,14 +32,14 @@ class ServiceItemListBody extends StatelessWidget {
           FittedBox(
             fit: BoxFit.scaleDown,
             child: GText(
-              color: Theme.of(context).scaffoldBackgroundColor,
+              color: Colors.black,
               content: serviceModel.title,
               fontSize: 32,
               fontWeight: FontWeight.w600,
             ),
           ),
           GText(
-              color: Theme.of(context).scaffoldBackgroundColor,
+              color: Colors.black,
               content: serviceModel.description,
               fontSize: 19,
               fontWeight: FontWeight.w400),
