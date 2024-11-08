@@ -14,15 +14,15 @@ class DashboardDesktopLayout extends StatelessWidget {
       child: Column(
         children: [
           CustomAppBar(),
-          // IntroductionSection(),
-          // SizedBox(
-          //   height: 50,
-          // ),
-          // AboutMeSection(),
-          // SizedBox(
-          //   height: 50,
-          // ),
-          // ServiceSection(),
+          IntroductionSection(),
+          SizedBox(
+            height: 50,
+          ),
+          AboutMeSection(),
+          SizedBox(
+            height: 50,
+          ),
+          ServiceSection(),
           SizedBox(
             height: 50,
           ),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:portfolioapp/core/extentions/screen_size.dart';
-import 'package:portfolioapp/core/utils/app_images.dart';
+import 'package:portfolioapp/feature/dashboard/data/model/my_project_model.dart';
 import '../../../../../../core/shared_widget/global_text.dart';
 import '../../../../../../core/utils/app_color.dart';
-import '../../../../../../core/utils/app_text.dart';
 
 class MyProjectItem extends StatelessWidget {
-  const MyProjectItem({super.key});
-
+  const MyProjectItem(
+      {super.key, required this.myProjectModel, required this.index});
+  final int index;
+  final MyProjectModel myProjectModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,18 +19,17 @@ class MyProjectItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image(
-              image: const AssetImage(
-                AppImages.perfectBody,
-              ),
-              height: 0.28.h,
+              image: AssetImage(myProjectModel.imagePath),
+              height: MediaQuery.of(context).size.height * 0.28,
+              fit: BoxFit.fill,
             ),
           ),
           const SizedBox(
             height: 10,
           ),
-          const GText(
+          GText(
             color: AppSharedColors.accentOrange,
-            content: AppText.thePerfectBodyApp,
+            content: myProjectModel.title,
             fontSize: 24,
             fontWeight: FontWeight.w700,
           ),
@@ -40,7 +39,9 @@ class MyProjectItem extends StatelessWidget {
           ElevatedButton(
               style: ElevatedButton.styleFrom(
                   backgroundColor: AppSharedColors.accentOrange),
-              onPressed: () {},
+              onPressed: () {
+                myProjectModel.onTap.call();
+              },
               child: const GText(content: "See Project", fontSize: 19)),
         ],
       ),

@@ -1,4 +1,3 @@
-
 import 'package:portfolioapp/core/utils/app_images.dart';
 
 import '../../../../core/utils/app_text.dart';
@@ -8,42 +7,41 @@ List<MyProjectModel> myProjectList = [
   MyProjectModel(
     title: AppText.thePerfectBodyApp,
     imagePath: AppImages.perfectBody,
-    onTap: (){},
+    onTap: () {},
   ),
   MyProjectModel(
     title: AppText.dashboardApp,
     imagePath: AppImages.dashboardApp,
-    onTap: (){},
+    onTap: () {},
   ),
-
   MyProjectModel(
     title: AppText.newsApp,
     imagePath: AppImages.newsApp,
-    onTap: (){},
+    onTap: () {},
   ),
   MyProjectModel(
     title: AppText.toDoApp,
     imagePath: AppImages.todoApp,
-    onTap: (){},
+    onTap: () {},
   ),
   MyProjectModel(
     title: AppText.bookApp,
     imagePath: AppImages.booklyApp,
-    onTap: (){},
+    onTap: () {},
   ),
   MyProjectModel(
     title: AppText.quizApp,
     imagePath: AppImages.quizApp,
-    onTap: (){},
+    onTap: () {},
   ),
   MyProjectModel(
     title: AppText.cafeApp,
     imagePath: AppImages.cafeApp,
-    onTap: (){},
+    onTap: () {},
   ),
   MyProjectModel(
     title: AppText.currenciesApp,
     imagePath: AppImages.currenciesApp,
-    onTap: (){},
+    onTap: () {},
   ),
 ];

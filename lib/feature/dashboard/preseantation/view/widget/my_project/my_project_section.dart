@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/core/shared_widget/custom_text_with_desc.dart';
 import 'package:portfolioapp/core/utils/app_text.dart';
-
-import 'my_project_item.dart';
+import 'custom_grid_view_my_project.dart';
 
 class MyProjectSection extends StatelessWidget {
   const MyProjectSection({super.key});
@@ -12,11 +11,10 @@ class MyProjectSection extends StatelessWidget {
       children: [
         CustomTitleWithDescription(
             title: AppText.myProjects, description: AppText.descriptionProject),
-        Row(
-          children: [
-            MyProjectItem(),
-          ],
-        )
+        SizedBox(
+          height: 40,
+        ),
+        CustomGridViewMyProject(),
       ],
     );
   }
