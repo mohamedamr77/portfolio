@@ -18,6 +18,7 @@ class AppText {
   static const String uiUx = "UI/UX";
   static const String webDesign = "Web Design";
   static const String desktopDesign = "desktop Design";
+  static const String  descriptionCertificates= "Showcasing a collection of certifications that validate my expertise and commitment to continuous learning in development, design, and technology.";
   static const String description1 =
       "I offer a range of services designed to bring your digital ideas to life. Whether you're building a startup or enhancing an existing product, my expertise ensures a seamless and impactful experience for your users.";
   static const String description2 =
