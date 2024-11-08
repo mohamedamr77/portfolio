@@ -6,6 +6,7 @@ import 'package:portfolioapp/core/utils/app_color.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view_model/dashboard_controller/dashboard_state.dart';
 import '../../../../data/model/certificate_list.dart';
 import '../../../view_model/dashboard_controller/dashboard_cubit.dart';
+import 'carousel_slider_item.dart';
 
 class CustomCarouselSlider extends StatelessWidget {
   const CustomCarouselSlider({super.key});
@@ -21,9 +22,7 @@ class CustomCarouselSlider extends StatelessWidget {
               itemCount: certificateList.length,
               itemBuilder:
                   (BuildContext context, int itemIndex, int pageViewIndex) =>
-                      ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image(image: AssetImage(certificateList[itemIndex].imagePath))),
+                  CarouselSliderItem(itemIndex: itemIndex, certificateModel: certificateList[itemIndex],),
               options: CarouselOptions(
                 autoPlayCurve: Curves.fastOutSlowIn,
                 autoPlay: true,
@@ -41,7 +40,7 @@ class CustomCarouselSlider extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
                 certificateList.length,
-                    (index) {
+                (index) {
                   return Container(
                     margin: const EdgeInsets.all(3),
                     height: 0.015.h,

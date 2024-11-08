@@ -11,8 +11,12 @@ class CertificatesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-         CustomTitleWithDescription(title: AppText.certificates, description: AppText.descriptionCertificates),
-        SizedBox(height: 30,),
+        CustomTitleWithDescription(
+            title: AppText.certificates,
+            description: AppText.descriptionCertificates),
+        SizedBox(
+          height: 30,
+        ),
         CustomCarouselSlider(),
       ],
     );

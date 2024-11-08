@@ -11,6 +11,7 @@ class DashboardCubit extends Cubit<DashboardState> {
     debugPrint("appBarServiceIndex = $index");
     emit(DashboardAppBarServiceChangeIndexState());
   }
+
   updateCurrentImageSliderImage(int index) {
     currentImageSliderImage = index;
     debugPrint("currentImageSliderImage = $index");
