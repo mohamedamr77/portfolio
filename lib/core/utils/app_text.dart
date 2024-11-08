@@ -3,7 +3,7 @@ class AppText {
   static const String aboutMe = "About Me";
   static const String services = "Services";
   static const String projects = "Projects";
-  static const String testimonials = "Testimonials";
+  static const String certificates = "Certificates";
   static const String contact = "Contact";
   static const String quizApp = "Quiz App";
   static const String cafeApp = "cafe App";
@@ -30,7 +30,7 @@ class AppText {
   static const String ux = "UX";
   static const String hiIam = "Hi I am";
   static const String downloadCv = "Download CV";
-  static const String testimonialsSection = "Testimonials";
+  static const String certificatesSection = "Certificates";
   static const String projectsSection = "Projects";
   static const String allProjects = "All";
   static const String ecomWebPageDesign = "Ecom Web Page Design";

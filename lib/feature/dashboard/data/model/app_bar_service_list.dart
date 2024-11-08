@@ -15,7 +15,7 @@ List<AppBarServiceModel> appBarServiceList = [
     title: AppText.projects,
   ),
   AppBarServiceModel(
-    title: AppText.testimonials,
+    title: AppText.certificates,
   ),
   AppBarServiceModel(
     title: AppText.contact,
