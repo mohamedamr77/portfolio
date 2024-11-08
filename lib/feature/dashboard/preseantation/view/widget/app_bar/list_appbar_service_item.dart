@@ -8,8 +8,8 @@ import '../../../view_model/dashboard_controller/dashboard_state.dart';
 import 'app_bar_service_body.dart';
 
 class ListAppBarServiceItem extends StatelessWidget {
-  const ListAppBarServiceItem({super.key});
-
+  const ListAppBarServiceItem({super.key, required this.appBarServiceList});
+  final List appBarServiceList;
   @override
   Widget build(BuildContext context) {
     return Padding(

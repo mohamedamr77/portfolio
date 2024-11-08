@@ -6,16 +6,16 @@ import 'list_appbar_service_item.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   final Size preferredSize;
-
-  const CustomAppBar({super.key})
+  final List appBarServiceList;
+  const CustomAppBar({super.key, required this.appBarServiceList})
       : preferredSize = const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {
     return MediaQuery.of(context).size.width > SizeConfig.desktopSize
-        ? const ListTile(
+        ?  ListTile(
             leading: ButtonSwitchTheme(),
-            title: ListAppBarServiceItem(),
+            title: ListAppBarServiceItem(appBarServiceList: appBarServiceList,),
           )
         : const SizedBox.shrink();
   }
