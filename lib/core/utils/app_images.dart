@@ -17,4 +17,9 @@ class AppImages {
   static const String newsApp = "assets/images/news_app.jpg";
   static const String dashboardApp = "assets/images/dashboardApp.jpg";
   static const String perfectBody = "assets/images/perfectBody2.png";
+  static const String flutterAdvancedCourseMvvMCertificate = "assets/images/flutterAdvancedCourseMvvM.jpg";
+  static const String flutterPaymentCertificate = "assets/images/flutterPayment.jpg";
+  static const String flutterResponsiveCourseCertificate = "assets/images/flutterResponsovieCourse.jpg";
+  static const String gitAndGithubCertificate = "assets/images/gitAndGithub.png";
+  static const String softSkillsCertificate = "assets/images/softSkills.png";
 }
