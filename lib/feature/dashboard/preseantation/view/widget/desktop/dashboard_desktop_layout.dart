@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/certificates/certificates_section.dart';
+import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/contact/contact_section.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/services_section/service_section.dart';
 import '../../../../../../core/shared_widget/space_between_section.dart';
 import '../../../../../../core/utils/app_text.dart';
@@ -84,6 +85,9 @@ class _DashboardDesktopLayoutState extends State<DashboardDesktopLayout> {
           const SpaceBetweenSection(),
           MyProjectSection(key: projectsKey),
           CertificatesSection(key: certificatesKey),
+          const SpaceBetweenSection(),
+          ContactSection(key: contactKey,),
+          const SpaceBetweenSection(),
         ],
       ),
     );

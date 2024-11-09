@@ -8,7 +8,7 @@ class SpaceBetweenSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  SizedBox(
-      height: height ??50,
+      height: height ??80,
       width: width ??50,
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolioapp/core/utils/app_color.dart';
 
 import '../shared_functions/shared_functions.dart';
 import '../utils/font_size_responsize.dart';
@@ -59,22 +60,34 @@ class CustomTextField extends StatelessWidget {
           FocusManager.instance.primaryFocus?.unfocus();
         },
         style: TextStyle(
-          // color: AppColor.primaryColor,
-          fontSize: getResponsiveFontSize(context: context, fontSize: 16),
+
+          color: Color(0xff797979),
+          fontSize: getResponsiveFontSize(context: context, fontSize: 21),
           fontWeight: FontWeight.w400,
           fontFamily: "Montserrat",
         ),
         decoration: InputDecoration(
           fillColor: fillColor ?? const Color(0xffFAFAFA),
+          filled: true,
           hintText: hintText,
           hintStyle: TextStyle(
               fontFamily: SharedFunctions.determineFontFamily(hintText),
               // color: AppColor.greyColor,
               fontSize: getResponsiveFontSize(context: context, fontSize: 16)),
-          border: const OutlineInputBorder(),
+          enabledBorder:enabledBorder ??  OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide(
+              color: Color(0xffAFAFAF)
+            )
+          ),
           prefixIcon: prefix,
           suffixIcon: suffixIcon,
-          focusedBorder: focusBorder,
+          focusedBorder: focusBorder??  OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(
+                  color: AppSharedColors.accentOrange
+              )
+          ),
           //   focusedBorder: focusBorder ??
           //       const OutlineInputBorder(
           //           // borderSide: BorderSide(color: AppColor.primaryColor)),

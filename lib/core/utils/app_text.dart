@@ -10,6 +10,7 @@ class AppText {
   static const String bookApp = "Bookly App";
   static const String toDoApp = "ToDo App";
   static const String newsApp = "News App";
+  static const String descriptionContact = "I would love to connect with you! Whether you have a project in mind, want to discuss Flutter development, or just want to chat about technology, feel free to reach out. You can contact me directly via the form below or through any of my social media links. I look forward to hearing from you!";
   static const String dashboardApp = "DashBoard App";
   static const String thePerfectBodyApp = "الوزن المثالى";
   static const String currenciesApp = "currencies";
