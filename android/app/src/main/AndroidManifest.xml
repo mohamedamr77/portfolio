@@ -18,6 +18,7 @@
         </intent>
     </queries>
 
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <application
         android:label="portfolioapp"

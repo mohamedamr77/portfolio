@@ -16,6 +16,7 @@ void main() async {
   await Hive.initFlutter();
   await Hive.openBox(BoxApp.kThemeBox);
 
+
   runApp(MultiBlocProvider(
     providers: [
       BlocProvider(

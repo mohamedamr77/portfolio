@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sms/flutter_sms.dart';
 import 'package:portfolioapp/core/extentions/screen_size.dart';
 import 'package:portfolioapp/core/shared_widget/custom_text_form_field.dart';
 import 'package:portfolioapp/core/shared_widget/custom_text_with_desc.dart';
@@ -28,6 +29,18 @@ class _ContactSectionState extends State<ContactSection> {
       await launch(url);
     } else {
       throw 'Could not launch $url';
+    }
+  }
+
+  void _sendSMS({required String phone, required String message}) async {
+    try {
+      String result = await sendSMS(
+        message: message,
+        recipients: [phone],
+      );
+      print(result);
+    } catch (error) {
+      print(error);
     }
   }
 
@@ -77,10 +90,15 @@ class _ContactSectionState extends State<ContactSection> {
             style: ElevatedButton.styleFrom(
                 backgroundColor: AppSharedColors.accentOrange),
             onPressed: () {
-              _launchWhatsApp(
-                name: _nameController.text,
-                phone: _phoneController.text,
-                message: _messageController.text,
+              // _launchWhatsApp(
+              //   name: _nameController.text,
+              //   phone: _phoneController.text,
+              //   message: _messageController.text,
+              // );
+
+              _sendSMS(
+                phone: '+201157280800',
+                message: 'Name: ${_nameController.text}\nMessage: ${_messageController.text}',
               );
             },
             child:
