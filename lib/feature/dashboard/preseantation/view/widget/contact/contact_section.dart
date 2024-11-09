@@ -5,11 +5,31 @@ import 'package:portfolioapp/core/shared_widget/custom_text_with_desc.dart';
 import 'package:portfolioapp/core/shared_widget/global_text.dart';
 import 'package:portfolioapp/core/utils/app_color.dart';
 import 'package:portfolioapp/core/utils/app_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'custom_title_with_text_form_field.dart';
 
-class ContactSection extends StatelessWidget {
+class ContactSection extends StatefulWidget {
   const ContactSection({super.key});
+
+  @override
+  _ContactSectionState createState() => _ContactSectionState();
+}
+
+class _ContactSectionState extends State<ContactSection> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _messageController = TextEditingController();
+
+  void _launchWhatsApp({required String name, required String phone, required String message}) async {
+    const String phoneNumber = '+201157280800'; // Replace with your phone number
+    final String url = 'https://api.whatsapp.com/send?phone=$phoneNumber&text=Name:%20$name%0APhone:%20$phone%0AMessage:%20$message';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,24 +41,34 @@ class ContactSection extends StatelessWidget {
         const SizedBox(
           height: 80,
         ),
-        const CustomTitleWithTextFormField(
+        CustomTitleWithTextFormField(
           title: "Name",
-          textFormField: CustomTextField(hintText: "Enter Your Name"),
+          textFormField: CustomTextField(
+            controller: _nameController,
+            hintText: "Enter Your Name",
+          ),
         ),
         const SizedBox(
           height: 20,
         ),
-        const CustomTitleWithTextFormField(
+        CustomTitleWithTextFormField(
           title: "Phone",
-          textFormField: CustomTextField(hintText: "Enter Your Phone"),
+          textFormField: CustomTextField(
+            controller: _phoneController,
+            hintText: "Enter Your Phone",
+          ),
         ),
         const SizedBox(
           height: 20,
         ),
-        const CustomTitleWithTextFormField(
+        CustomTitleWithTextFormField(
           title: "Message",
           textFormField: CustomTextField(
-              minLine: 3, maxLine: 8, hintText: "Enter Your Message"),
+            controller: _messageController,
+            minLine: 3,
+            maxLine: 8,
+            hintText: "Enter Your Message",
+          ),
         ),
         const SizedBox(
           height: 20,
@@ -46,9 +76,15 @@ class ContactSection extends StatelessWidget {
         ElevatedButton(
             style: ElevatedButton.styleFrom(
                 backgroundColor: AppSharedColors.accentOrange),
-            onPressed: () {},
+            onPressed: () {
+              _launchWhatsApp(
+                name: _nameController.text,
+                phone: _phoneController.text,
+                message: _messageController.text,
+              );
+            },
             child:
-                const GText(content: "${AppText.contact} Me ", fontSize: 19)),
+            const GText(content: "${AppText.contact} Me ", fontSize: 19)),
       ],
     );
   }
