@@ -9,7 +9,6 @@ class IntroductionSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      key: key,
       padding: EdgeInsets.only(
           left: 0.11.w, right: 0.06.w, top: 0.06.h, bottom: 0.04.h),
       child:  Row(
