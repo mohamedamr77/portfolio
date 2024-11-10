@@ -43,7 +43,7 @@ class _DashboardBodyState extends State<DashboardBody> {
         servicesKey: servicesKey,
         projectsKey: projectsKey,
         certificatesKey: certificatesKey,
-        contactKey: contactKey,
+        contactKey: contactKey, scrollToSection: scrollToSection,
       ),
       desktopLayout: (context) => DashboardDesktopLayout(
         scrollControllerPage: scrollController,

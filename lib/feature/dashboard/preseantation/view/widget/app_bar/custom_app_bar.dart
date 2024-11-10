@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolioapp/core/shared_widget/global_text.dart';
 import '../../../../../../core/utils/size_config.dart';
 import 'button_swtich_theme.dart';
 import 'list_appbar_service_item.dart';
@@ -12,7 +13,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MediaQuery.of(context).size.width >= SizeConfig.desktopSize
+    return  ListTile(
+      leading: const Expanded(
+        child: ButtonSwitchTheme(),
+      ),
+      title: ListAppBarServiceItem(
+        appBarServiceList: appBarServiceList,
+      ),
+    );
+  }
+}
+
+/*
+MediaQuery.of(context).size.width >= SizeConfig.tabletSize
         ? ListTile(
             leading: const ButtonSwitchTheme(),
             title: ListAppBarServiceItem(
@@ -20,5 +33,4 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
           )
         : const SizedBox.shrink();
-  }
-}
+ */
