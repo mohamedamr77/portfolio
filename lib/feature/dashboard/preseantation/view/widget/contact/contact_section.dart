@@ -20,7 +20,7 @@ class ContactSection extends StatefulWidget {
 
 class _ContactSectionState extends State<ContactSection> {
   final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _phoneController = TextEditingController();
+  // final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _messageController = TextEditingController();
 
 
@@ -45,13 +45,13 @@ class _ContactSectionState extends State<ContactSection> {
         const SizedBox(
           height: 20,
         ),
-        CustomTitleWithTextFormField(
-          title: "Phone",
-          textFormField: CustomTextField(
-            controller: _phoneController,
-            hintText: "Enter Your Phone",
-          ),
-        ),
+        // CustomTitleWithTextFormField(
+        //   title: "",
+        //   textFormField: CustomTextField(
+        //     controller: _emailController,
+        //     hintText: "Enter Your Email",
+        //   ),
+        // ),
         const SizedBox(
           height: 20,
         ),
@@ -73,9 +73,10 @@ class _ContactSectionState extends State<ContactSection> {
             onPressed: () {
               SendMessageService.launchWhatsApp(
                 name: _nameController.text,
-                phone: _phoneController.text,
+                // phone: _phoneController.text,
                 message: _messageController.text,
               );
+
 
               // SendMessageService.sendSMSMessage(
               //   phone: '+201157280800',
