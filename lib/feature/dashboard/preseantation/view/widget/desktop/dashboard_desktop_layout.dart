@@ -83,6 +83,7 @@ class _DashboardDesktopLayoutState extends State<DashboardDesktopLayout> {
         SliverToBoxAdapter(child: ServiceSection(key: servicesKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         MyProjectSection(key: projectsKey),
+        const SliverToBoxAdapter(child: SpaceBetweenSection(height: 30,)),
         SliverToBoxAdapter(child: CertificatesSection(key: certificatesKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: ContactSection(key: contactKey)),

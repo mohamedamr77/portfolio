@@ -9,7 +9,7 @@ class DashboardBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdaptiveLayout(
       mobileLayout: (context) => const SizedBox(),
-      tabletLayout: (context) => const SizedBox(),
+      tabletLayout: (context) => const DashboardDesktopLayout(),
       desktopLayout: (context) => const DashboardDesktopLayout(),
     );
   }

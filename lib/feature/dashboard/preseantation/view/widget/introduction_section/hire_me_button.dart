@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:portfolioapp/core/extentions/screen_size.dart';
 import 'package:portfolioapp/core/utils/send_message_service.dart';
 
@@ -14,11 +15,13 @@ class HireMeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomElevatedButton(
         btnColor: AppSharedColors.accentOrange,
-        width: 0.1.w,
+        width:  MediaQuery.sizeOf(context).width *0.1,
         height: 0.07.h,
         borderRadius: BorderRadius.circular(5),
         onPress: SendMessageService.sendEmail,
-        child: const GText(content: AppText.hireMe, fontSize: 21));
+        child: const FittedBox(
+            fit: BoxFit.scaleDown,
+            child: GText(content: AppText.hireMe, fontSize: 21)));
   }
 
 
