@@ -60,7 +60,6 @@ class CustomTextField extends StatelessWidget {
           FocusManager.instance.primaryFocus?.unfocus();
         },
         style: TextStyle(
-
           color: const Color(0xff797979),
           fontSize: getResponsiveFontSize(context: context, fontSize: 21),
           fontWeight: FontWeight.w400,
@@ -74,20 +73,17 @@ class CustomTextField extends StatelessWidget {
               fontFamily: SharedFunctions.determineFontFamily(hintText),
               // color: AppColor.greyColor,
               fontSize: getResponsiveFontSize(context: context, fontSize: 16)),
-          enabledBorder:enabledBorder ??  OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(
-              color: Color(0xffAFAFAF)
-            )
-          ),
+          enabledBorder: enabledBorder ??
+              OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: const BorderSide(color: Color(0xffAFAFAF))),
           prefixIcon: prefix,
           suffixIcon: suffixIcon,
-          focusedBorder: focusBorder??  OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(
-                  color: AppSharedColors.accentOrange
-              )
-          ),
+          focusedBorder: focusBorder ??
+              OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide:
+                      const BorderSide(color: AppSharedColors.accentOrange)),
           //   focusedBorder: focusBorder ??
           //       const OutlineInputBorder(
           //           // borderSide: BorderSide(color: AppColor.primaryColor)),

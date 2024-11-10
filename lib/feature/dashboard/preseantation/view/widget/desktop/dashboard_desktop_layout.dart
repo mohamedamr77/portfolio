@@ -21,7 +21,7 @@ class DashboardDesktopLayout extends StatelessWidget {
   final Function(GlobalKey) scrollToSection;
 
   const DashboardDesktopLayout({
-    Key? key,
+    super.key,
     required this.scrollControllerPage,
     required this.homeKey,
     required this.aboutMeKey,
@@ -30,7 +30,7 @@ class DashboardDesktopLayout extends StatelessWidget {
     required this.certificatesKey,
     required this.contactKey,
     required this.scrollToSection,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,8 @@ class DashboardDesktopLayout extends StatelessWidget {
     return CustomScrollView(
       controller: scrollControllerPage,
       slivers: [
-        SliverToBoxAdapter(child: CustomAppBar(appBarServiceList: appBarServiceList)),
+        SliverToBoxAdapter(
+            child: CustomAppBar(appBarServiceList: appBarServiceList)),
         SliverToBoxAdapter(child: IntroductionSection(key: homeKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: AboutMeSection(key: aboutMeKey)),

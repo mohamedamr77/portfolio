@@ -48,4 +48,3 @@ class DashboardTabletLayout extends StatelessWidget {
     );
   }
 }
-

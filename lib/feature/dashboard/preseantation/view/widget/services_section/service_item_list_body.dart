@@ -29,7 +29,8 @@ class _ServiceItemListBodyState extends State<ServiceItemListBody> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
         margin: widget.margin,
-        padding:  EdgeInsets.symmetric(horizontal: 18 , vertical:  _isHovered ? 30 : 0 ),
+        padding:
+            EdgeInsets.symmetric(horizontal: 18, vertical: _isHovered ? 30 : 0),
         // width: _isHovered ? 300 : 250, // Adjust width based on hover
         decoration: BoxDecoration(
           color: AppSharedColors.lightGray,

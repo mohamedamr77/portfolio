@@ -20,8 +20,6 @@ class _ContactSectionState extends State<ContactSection> {
   // final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _messageController = TextEditingController();
 
-
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -79,7 +77,7 @@ class _ContactSectionState extends State<ContactSection> {
               // );
             },
             child:
-            const GText(content: "${AppText.contact} Me ", fontSize: 19)),
+                const GText(content: "${AppText.contact} Me ", fontSize: 19)),
       ],
     );
   }

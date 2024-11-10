@@ -4,11 +4,12 @@ import 'package:portfolioapp/core/utils/social_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
-class SendMessageService{
 
-
-  static void launchWhatsApp({required String name, required String message}) async {
-    final String url = 'https://api.whatsapp.com/send?phone=${SocialService.phoneNumber}&text=Name:%20$name%0AMessage:%20$message';
+class SendMessageService {
+  static void launchWhatsApp(
+      {required String name, required String message}) async {
+    final String url =
+        'https://api.whatsapp.com/send?phone=${SocialService.phoneNumber}&text=Name:%20$name%0AMessage:%20$message';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -16,7 +17,8 @@ class SendMessageService{
     }
   }
 
- static void sendSMSMessage({required String phone, required String message}) async {
+  static void sendSMSMessage(
+      {required String phone, required String message}) async {
     try {
       String result = await sendSMS(
         message: message,
@@ -28,8 +30,10 @@ class SendMessageService{
     }
   }
 
-
-  static void sendEmailFromApp({required String name, required String email, required String message}) async {
+  static void sendEmailFromApp(
+      {required String name,
+      required String email,
+      required String message}) async {
     String username = 'moamr947@gmail.com';
     String password = 'Mm01157280800#*';
 
@@ -49,9 +53,7 @@ class SendMessageService{
     }
   }
 
-
-
- static void sendEmail() async {
+  static void sendEmail() async {
     final Uri emailUri = Uri(
       scheme: 'mailto',
       path: SocialService.email,
@@ -65,7 +67,6 @@ class SendMessageService{
     }
   }
 }
-
 
 /*
   static void launchWhatsApp({required String name, required String phone, required String message}) async {

@@ -5,13 +5,15 @@ import 'image_and_soical_icon.dart';
 import 'introduction_content.dart';
 
 class IntroductionSection extends StatelessWidget {
-  const IntroductionSection({super.key,});
+  const IntroductionSection({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
           left: 0.11.w, right: 0.06.w, top: 0.06.h, bottom: 0.04.h),
-      child:  const Row(
+      child: const Row(
         children: [
           IntroductionContent(),
           ImageAndSocialIcon(),

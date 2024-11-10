@@ -14,7 +14,7 @@ class SocialIcons extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            launchCustomUrl(url: SocialService.facebook , context: context );
+            launchCustomUrl(url: SocialService.facebook, context: context);
           },
           child: SvgPicture.asset(
             AppImages.facebook,
@@ -25,8 +25,8 @@ class SocialIcons extends StatelessWidget {
           width: 25,
         ),
         GestureDetector(
-          onTap: (){
-            launchCustomUrl(url: SocialService.github , context: context );
+          onTap: () {
+            launchCustomUrl(url: SocialService.github, context: context);
           },
           child: SvgPicture.asset(
             AppImages.github,
@@ -39,8 +39,8 @@ class SocialIcons extends StatelessWidget {
           width: 25,
         ),
         GestureDetector(
-          onTap: (){
-            launchCustomUrl(url: SocialService.instagram , context: context );
+          onTap: () {
+            launchCustomUrl(url: SocialService.instagram, context: context);
           },
           child: SvgPicture.asset(
             AppImages.instagram,
@@ -51,8 +51,8 @@ class SocialIcons extends StatelessWidget {
           width: 25,
         ),
         GestureDetector(
-          onTap: (){
-            launchCustomUrl(url: SocialService.linkedIn , context: context );
+          onTap: () {
+            launchCustomUrl(url: SocialService.linkedIn, context: context);
           },
           child: SvgPicture.asset(
             AppImages.linkedIn,
@@ -63,5 +63,3 @@ class SocialIcons extends StatelessWidget {
     );
   }
 }
-
-

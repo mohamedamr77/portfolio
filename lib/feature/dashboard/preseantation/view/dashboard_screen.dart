@@ -9,11 +9,10 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: DashboardBody(),
     );
   }
 }
 
 // appBar: MediaQuery.sizeOf(context).width<SizeConfig.desktopSize ? AppBar():null,
-

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/core/extentions/screen_size.dart';
-
 import '../../../../../../core/shared_widget/global_text.dart';
 import '../../../../../../core/utils/app_color.dart';
 import '../../../../../../core/utils/app_text.dart';
@@ -38,8 +37,8 @@ class IntroductionContent extends StatelessWidget {
             padding: EdgeInsets.only(left: 0.14.w),
             child: const CustomBoldText(text: AppText.developer),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: MediaQuery.sizeOf(context).height * 0.01,
           ),
           const HireMeButton(),
         ],

@@ -11,7 +11,6 @@ class DashboardBody extends StatefulWidget {
 }
 
 class _DashboardBodyState extends State<DashboardBody> {
-
   final ScrollController scrollController = ScrollController();
 
   final GlobalKey homeKey = GlobalKey();
@@ -58,4 +57,3 @@ class _DashboardBodyState extends State<DashboardBody> {
     );
   }
 }
-

@@ -15,14 +15,16 @@ class CustomGridViewMyProject extends StatelessWidget {
       itemCount: myProjectList.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount:
-        MediaQuery.sizeOf(context).width <SizeConfig.desktopSize?
-          3 : 4, // Two items in one row
+            MediaQuery.sizeOf(context).width < SizeConfig.desktopSize
+                ? 3
+                : 4, // Two items in one row
         crossAxisSpacing: MediaQuery.sizeOf(context).width *
             0.02, // Horizontal space between grid items
         mainAxisSpacing: MediaQuery.sizeOf(context).height * 0.04,
         childAspectRatio:
-        MediaQuery.sizeOf(context).width <SizeConfig.desktopSize?
-            1.03 :0.95, // Aspect ratio for each grid item (width / height)
+            MediaQuery.sizeOf(context).width < SizeConfig.desktopSize
+                ? 1.03
+                : 0.95, // Aspect ratio for each grid item (width / height)
       ),
       itemBuilder: (context, index) {
         return MyProjectItem(

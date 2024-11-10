@@ -22,7 +22,10 @@ class CustomCarouselSlider extends StatelessWidget {
               itemCount: certificateList.length,
               itemBuilder:
                   (BuildContext context, int itemIndex, int pageViewIndex) =>
-                  CarouselSliderItem(itemIndex: itemIndex, certificateModel: certificateList[itemIndex],),
+                      CarouselSliderItem(
+                itemIndex: itemIndex,
+                certificateModel: certificateList[itemIndex],
+              ),
               options: CarouselOptions(
                 autoPlayCurve: Curves.fastOutSlowIn,
                 autoPlay: true,
@@ -30,7 +33,8 @@ class CustomCarouselSlider extends StatelessWidget {
                 aspectRatio: 1087 / 300,
                 initialPage: 0,
                 onPageChanged: (value, v) {
-                  BlocProvider.of<DashboardCubit>(context).updateCurrentImageSliderImage(value);
+                  BlocProvider.of<DashboardCubit>(context)
+                      .updateCurrentImageSliderImage(value);
                 },
                 enlargeFactor: 0.1,
               ),

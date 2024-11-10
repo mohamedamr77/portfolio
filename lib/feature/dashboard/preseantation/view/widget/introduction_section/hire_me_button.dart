@@ -15,7 +15,7 @@ class HireMeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomElevatedButton(
         btnColor: AppSharedColors.accentOrange,
-        width:  MediaQuery.sizeOf(context).width *0.1,
+        width: MediaQuery.sizeOf(context).width * 0.1,
         height: 0.07.h,
         borderRadius: BorderRadius.circular(5),
         onPress: SendMessageService.sendEmail,
@@ -23,6 +23,4 @@ class HireMeButton extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: GText(content: AppText.hireMe, fontSize: 21)));
   }
-
-
 }

@@ -6,5 +6,9 @@ class MyProjectModel {
   final void Function() onTap;
 
   MyProjectModel(
-      {required this.title, required this.imagePath, required this.onTap , required this.videoPath, required this.codeInGithubPath});
+      {required this.title,
+      required this.imagePath,
+      required this.onTap,
+      required this.videoPath,
+      required this.codeInGithubPath});
 }

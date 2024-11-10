@@ -25,8 +25,7 @@ class _ProjectDetailsBodyState extends State<ProjectDetailsBody> {
     super.initState();
     _controller = VideoPlayerController.asset(
       'assets/videos/quiz-app.mp4',
-    )
-      ..initialize().then((_) {
+    )..initialize().then((_) {
         setState(() {});
       });
   }
@@ -80,9 +79,7 @@ class _ProjectDetailsBodyState extends State<ProjectDetailsBody> {
       child: Column(
         children: [
           _controller.value.isInitialized
-              ? SizedBox(
-              height: 0.7.h,
-              child: VideoPlayer(_controller))
+              ? SizedBox(height: 0.7.h, child: VideoPlayer(_controller))
               : const CircularProgressIndicator(),
           const SizedBox(height: 10),
           Row(
@@ -91,7 +88,9 @@ class _ProjectDetailsBodyState extends State<ProjectDetailsBody> {
               ElevatedButton(
                 onPressed: () {
                   setState(() {
-                    _controller.value.isPlaying ? _controller.pause() : _controller.play();
+                    _controller.value.isPlaying
+                        ? _controller.pause()
+                        : _controller.play();
                   });
                 },
                 child: Icon(
@@ -128,12 +127,14 @@ class _ProjectDetailsBodyState extends State<ProjectDetailsBody> {
               // ),
             ],
           ),
-          const SizedBox(height: 20,),
+          const SizedBox(
+            height: 20,
+          ),
           const GText(content: " The Code In Github", fontSize: 24),
           const SizedBox(height: 20),
           GestureDetector(
-            onTap: (){
-              launchCustomUrl(url: SocialService.github , context: context );
+            onTap: () {
+              launchCustomUrl(url: SocialService.github, context: context);
             },
             child: SvgPicture.asset(
               AppImages.github,

@@ -42,7 +42,8 @@ class MyProjectItem extends StatelessWidget {
                   backgroundColor: AppSharedColors.accentOrange),
               onPressed: () {
                 myProjectModel.onTap.call();
-                launchCustomUrl(url: myProjectModel.codeInGithubPath, context: context);
+                launchCustomUrl(
+                    url: myProjectModel.codeInGithubPath, context: context);
                 // NavigationManager.push(ProjectDetailsScreen.id);
               },
               child: const GText(content: "See Project", fontSize: 19)),
