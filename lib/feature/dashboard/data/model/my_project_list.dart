@@ -7,41 +7,42 @@ List<MyProjectModel> myProjectList = [
   MyProjectModel(
     title: AppText.thePerfectBodyApp,
     imagePath: AppImages.perfectBody,
-    onTap: () {},
+    onTap: () {}, videoPath: '', codeInGithubPath: '',
   ),
   MyProjectModel(
     title: AppText.dashboardApp,
     imagePath: AppImages.dashboardApp,
-    onTap: () {},
+    onTap: () {}, videoPath: '', codeInGithubPath: '',
   ),
   MyProjectModel(
     title: AppText.newsApp,
     imagePath: AppImages.newsApp,
-    onTap: () {},
+    onTap: () {}, videoPath: '', codeInGithubPath: '',
   ),
+
   MyProjectModel(
     title: AppText.toDoApp,
     imagePath: AppImages.todoApp,
-    onTap: () {},
+    onTap: () {}, videoPath: 'assets/videos/to do app.mp4', codeInGithubPath: '',
   ),
   MyProjectModel(
     title: AppText.bookApp,
     imagePath: AppImages.booklyApp,
-    onTap: () {},
+    onTap: () {}, videoPath: 'assets/videos/bookly app.mp4', codeInGithubPath: '',
   ),
   MyProjectModel(
     title: AppText.quizApp,
     imagePath: AppImages.quizApp,
-    onTap: () {},
+    onTap: () {}, videoPath: 'assets/videos/quiz-app.mp4', codeInGithubPath: '',
   ),
   MyProjectModel(
     title: AppText.cafeApp,
     imagePath: AppImages.cafeApp,
-    onTap: () {},
+    onTap: () {}, videoPath: 'assets/videos/cafe app.mp4', codeInGithubPath: '',
   ),
   MyProjectModel(
     title: AppText.currenciesApp,
     imagePath: AppImages.currenciesApp,
-    onTap: () {},
+    onTap: () {}, videoPath: '', codeInGithubPath: 'assets/videos/digital_transaction_app.mp4',
   ),
 ];

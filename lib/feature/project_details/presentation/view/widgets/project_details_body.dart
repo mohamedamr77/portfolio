@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolioapp/core/extentions/screen_size.dart';
-import 'package:flick_video_player/flick_video_player.dart';
 import 'package:portfolioapp/core/shared_widget/global_text.dart';
 import 'package:video_player/video_player.dart';
 
@@ -129,7 +128,7 @@ class _ProjectDetailsBodyState extends State<ProjectDetailsBody> {
               // ),
             ],
           ),
-         const SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           const GText(content: " The Code In Github", fontSize: 24),
           const SizedBox(height: 20),
           GestureDetector(
