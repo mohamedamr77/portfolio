@@ -23,8 +23,9 @@ class CustomGridViewMyProject extends StatelessWidget {
         mainAxisSpacing: MediaQuery.sizeOf(context).height * 0.04,
         childAspectRatio:
             MediaQuery.sizeOf(context).width < SizeConfig.desktopSize
-                ? 1.03
-                : 0.95, // Aspect ratio for each grid item (width / height)
+                ? 1.01
+            :
+            0.95, // Aspect ratio for each grid item (width / height)
       ),
       itemBuilder: (context, index) {
         return MyProjectItem(

@@ -4,21 +4,21 @@ import '../utils/size_config.dart';
 class AdaptiveLayout extends StatelessWidget {
   const AdaptiveLayout(
       {super.key,
-        this.mobileLayout,
-        this.tabletLayout,
-        this.desktopLayout});
-  final Widget? mobileLayout, tabletLayout, desktopLayout;
+      required this.mobileLayout,
+      required this.tabletLayout,
+      required this.desktopLayout});
+  final WidgetBuilder mobileLayout, tabletLayout, desktopLayout;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth < SizeConfig.tabletSize) {
-          return mobileLayout ?? Container(); // Provide a default non-nullable widget
+          return mobileLayout(context);
         } else if (constraints.maxWidth < SizeConfig.desktopSize) {
-          return tabletLayout ?? Container(); // Provide a default non-nullable widget
+          return tabletLayout(context);
         } else {
-          return desktopLayout ?? Container(); // Provide a default non-nullable widget
+          return desktopLayout(context);
         }
       },
     );
