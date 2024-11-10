@@ -47,4 +47,13 @@ class AppText {
   static const String profession = "Flutter developer";
   static const String developer = "Developer";
   static const String flutter = "Flutter";
+  static const String  toDoAppGithub = "https://github.com/mohamedamr77/to-do-app";
+  static const String  dashboardCourseGithub = "https://github.com/mohamedamr77/dashboard_course";
+  static const String booklyAppGithub = "https://github.com/mohamedamr77/bookly_app";
+  static const String newsAppGithub = "https://github.com/mohamedamr77/newsapp_new";
+  static const String weatherAppGithub = "https://github.com/mohamedamr77/weather_app";
+  static const String currenciesAppGithub = "https://github.com/mohamedamr77/Currencies";
+  static const String flowerCafeAppGithub = "https://github.com/mohamedamr77/flowercafeapp";
+  static const String quizAppGithub = "https://github.com/mohamedamr77/quizapp";
+
 }

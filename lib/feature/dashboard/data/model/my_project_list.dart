@@ -12,37 +12,38 @@ List<MyProjectModel> myProjectList = [
   MyProjectModel(
     title: AppText.dashboardApp,
     imagePath: AppImages.dashboardApp,
-    onTap: () {}, videoPath: '', codeInGithubPath: '',
+    onTap: () {
+    }, videoPath: '', codeInGithubPath: AppText.dashboardCourseGithub,
   ),
   MyProjectModel(
     title: AppText.newsApp,
     imagePath: AppImages.newsApp,
-    onTap: () {}, videoPath: '', codeInGithubPath: '',
+    onTap: () {}, videoPath: '', codeInGithubPath: AppText.newsAppGithub,
   ),
 
   MyProjectModel(
     title: AppText.toDoApp,
     imagePath: AppImages.todoApp,
-    onTap: () {}, videoPath: 'assets/videos/to do app.mp4', codeInGithubPath: '',
+    onTap: () {}, videoPath: '', codeInGithubPath: AppText.toDoAppGithub,
   ),
   MyProjectModel(
     title: AppText.bookApp,
     imagePath: AppImages.booklyApp,
-    onTap: () {}, videoPath: 'assets/videos/bookly app.mp4', codeInGithubPath: '',
+    onTap: () {}, videoPath: '', codeInGithubPath: AppText.booklyAppGithub,
   ),
   MyProjectModel(
     title: AppText.quizApp,
     imagePath: AppImages.quizApp,
-    onTap: () {}, videoPath: 'assets/videos/quiz-app.mp4', codeInGithubPath: '',
+    onTap: () {}, videoPath: '', codeInGithubPath: AppText.quizAppGithub
   ),
   MyProjectModel(
     title: AppText.cafeApp,
     imagePath: AppImages.cafeApp,
-    onTap: () {}, videoPath: 'assets/videos/cafe app.mp4', codeInGithubPath: '',
+    onTap: () {}, videoPath:"", codeInGithubPath: AppText.flowerCafeAppGithub,
   ),
   MyProjectModel(
     title: AppText.currenciesApp,
     imagePath: AppImages.currenciesApp,
-    onTap: () {}, videoPath: '', codeInGithubPath: 'assets/videos/digital_transaction_app.mp4',
+    onTap: () {}, videoPath: '', codeInGithubPath:  AppText.currenciesAppGithub,
   ),
 ];

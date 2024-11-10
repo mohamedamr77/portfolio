@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sms/flutter_sms.dart';
-import 'package:portfolioapp/core/extentions/screen_size.dart';
 import 'package:portfolioapp/core/shared_widget/custom_text_form_field.dart';
 import 'package:portfolioapp/core/shared_widget/custom_text_with_desc.dart';
 import 'package:portfolioapp/core/shared_widget/global_text.dart';
 import 'package:portfolioapp/core/utils/app_color.dart';
 import 'package:portfolioapp/core/utils/app_text.dart';
 import 'package:portfolioapp/core/utils/send_message_service.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'custom_title_with_text_form_field.dart';
 

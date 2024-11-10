@@ -61,7 +61,7 @@ class CustomTextField extends StatelessWidget {
         },
         style: TextStyle(
 
-          color: Color(0xff797979),
+          color: const Color(0xff797979),
           fontSize: getResponsiveFontSize(context: context, fontSize: 21),
           fontWeight: FontWeight.w400,
           fontFamily: "Montserrat",
@@ -76,7 +76,7 @@ class CustomTextField extends StatelessWidget {
               fontSize: getResponsiveFontSize(context: context, fontSize: 16)),
           enabledBorder:enabledBorder ??  OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Color(0xffAFAFAF)
             )
           ),
@@ -84,7 +84,7 @@ class CustomTextField extends StatelessWidget {
           suffixIcon: suffixIcon,
           focusedBorder: focusBorder??  OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                   color: AppSharedColors.accentOrange
               )
           ),

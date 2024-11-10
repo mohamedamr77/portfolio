@@ -8,7 +8,6 @@ import '../../../../data/model/app_bar_service_model.dart';
 import '../about_me/about_me_section.dart';
 import '../app_bar/custom_app_bar.dart';
 import '../introduction_section/introduction_section.dart';
-import '../my_project/custom_grid_view_my_project.dart';
 import '../my_project/my_project_section.dart';
 
 class DashboardDesktopLayout extends StatefulWidget {

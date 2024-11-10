@@ -11,7 +11,7 @@ class IntroductionSection extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(
           left: 0.11.w, right: 0.06.w, top: 0.06.h, bottom: 0.04.h),
-      child:  Row(
+      child:  const Row(
         children: [
           IntroductionContent(),
           ImageAndSocialIcon(),

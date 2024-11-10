@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 
-import '../shared_functions/launch_url.dart';
 
 class SocialService{
   static const  String  linkedIn = "https://www.linkedin.com/in/mohamed-amr-184045293/";

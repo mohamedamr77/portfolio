@@ -43,9 +43,9 @@ class SendMessageService{
 
     try {
       final sendReport = await send(emailMessage, smtpServer);
-      print('Message sent: ' + sendReport.toString());
+      print('Message sent: $sendReport');
     } on MailerException catch (e) {
-      print('Message not sent. \n' + e.toString());
+      print('Message not sent. \n$e');
     }
   }
 
