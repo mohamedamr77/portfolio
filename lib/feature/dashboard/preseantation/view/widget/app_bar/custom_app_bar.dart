@@ -14,7 +14,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return  ListTile(
-      leading: ButtonSwitchTheme(),
+      leading: const ButtonSwitchTheme(),
       title: ListAppBarServiceItem(
         appBarServiceList: appBarServiceList,
       ),

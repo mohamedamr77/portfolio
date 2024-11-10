@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolioapp/core/extentions/screen_size.dart';
 import 'package:portfolioapp/core/shared_functions/launch_url.dart';
 import 'package:portfolioapp/feature/dashboard/data/model/my_project_model.dart';
 import '../../../../../../core/shared_widget/global_text.dart';
@@ -21,7 +22,7 @@ class MyProjectItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             child: Image(
               image: AssetImage(myProjectModel.imagePath),
-              height: MediaQuery.of(context).size.height * 0.28,
+              height: 200,
               fit: BoxFit.fill,
             ),
           ),

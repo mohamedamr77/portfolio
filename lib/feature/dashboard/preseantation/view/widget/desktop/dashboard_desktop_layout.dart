@@ -77,6 +77,7 @@ class DashboardDesktopLayout extends StatelessWidget {
         SliverToBoxAdapter(child: CertificatesSection(key: certificatesKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: ContactSection(key: contactKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
       ],
     );
   }
