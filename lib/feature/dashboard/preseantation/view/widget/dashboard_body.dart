@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolioapp/core/utils/size_config.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/tablet/dashboard_tablet_layout.dart';
 import '../../../../../core/shared_widget/adabtive_layout.dart';
 import 'desktop/dashboard_desktop_layout.dart';
@@ -33,9 +34,11 @@ class _DashboardBodyState extends State<DashboardBody> {
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveLayout(
-      mobileLayout: (context) => const SizedBox(),
-      tabletLayout: (context) => DashboardTabletLayout(
+    return
+      MediaQuery.of(context).size.width < SizeConfig.tabletSize ?
+      const SizedBox():
+      MediaQuery.of(context).size.width < SizeConfig.tabletSize ?
+      DashboardTabletLayout(
         scrollControllerPage: scrollController,
         homeKey: homeKey,
         aboutMeKey: aboutMeKey,
@@ -43,8 +46,8 @@ class _DashboardBodyState extends State<DashboardBody> {
         projectsKey: projectsKey,
         certificatesKey: certificatesKey,
         contactKey: contactKey,
-      ),
-      desktopLayout: (context) => DashboardDesktopLayout(
+      ) :
+      DashboardDesktopLayout(
         scrollControllerPage: scrollController,
         homeKey: homeKey,
         aboutMeKey: aboutMeKey,
@@ -53,7 +56,6 @@ class _DashboardBodyState extends State<DashboardBody> {
         certificatesKey: certificatesKey,
         contactKey: contactKey,
         scrollToSection: scrollToSection,
-      ),
-    );
+      );
   }
 }
