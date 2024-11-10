@@ -15,7 +15,7 @@ class IntroductionSection extends StatelessWidget {
           left: 0.11.w, right: 0.06.w, top: 0.06.h, bottom: 0.04.h),
       child: const Row(
         children: [
-          IntroductionContent(),
+          Expanded(child: IntroductionContent()),
           ImageAndSocialIcon(),
         ],
       ),

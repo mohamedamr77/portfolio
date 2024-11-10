@@ -7,7 +7,7 @@ double getResponsiveFontSize(
   double fontResponsiveSize = fontSize * scaleFactor;
 
   // Clamp font size within limits (80% to 120% of calculated size)
-  double lowerLimit = fontSize * 0.8;
+  double lowerLimit = fontSize * 0.7;
   double upperLimit = fontSize * 1.2;
   // debugPrint("font size $fontResponsiveSize = $lowerLimit $upperLimit}");
   return fontResponsiveSize.clamp(lowerLimit, upperLimit);
@@ -25,9 +25,9 @@ double getScaleFactor({required BuildContext context}) {
   if (width <= 400) {
     return width / 500; // Tighter scaling for small phones
   } else if (width <= SizeConfig.mobileSize) {
-    return width / 500;
+    return width / 700;
   } else if (width <= SizeConfig.tabletSize) {
-    return width / 1000;
+    return width / 1200;
   } else {
     return width / 1800; // Slightly larger screens have larger base
   }

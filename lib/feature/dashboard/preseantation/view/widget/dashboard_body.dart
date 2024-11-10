@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/tablet/dashboard_tablet_layout.dart';
 import '../../../../../core/shared_widget/adabtive_layout.dart';
+import 'dashboard_mobile_layout.dart';
 import 'desktop/dashboard_desktop_layout.dart';
 
 class DashboardBody extends StatefulWidget {
@@ -35,7 +36,15 @@ class _DashboardBodyState extends State<DashboardBody> {
   Widget build(BuildContext context) {
     debugPrint("Width : ${MediaQuery.of(context).size.width}");
     return AdaptiveLayout(
-      mobileLayout: (context) => const SizedBox(),
+      mobileLayout: (context) =>  DashboardMobileLayout(
+        scrollControllerPage: scrollController,
+        homeKey: homeKey,
+        aboutMeKey: aboutMeKey,
+        servicesKey: servicesKey,
+        projectsKey: projectsKey,
+        certificatesKey: certificatesKey,
+        contactKey: contactKey, scrollToSection: scrollToSection,
+      ),
       tabletLayout: (context) => DashboardTabletLayout(
         scrollControllerPage: scrollController,
         homeKey: homeKey,
