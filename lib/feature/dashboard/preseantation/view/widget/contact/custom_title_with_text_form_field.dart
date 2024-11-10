@@ -10,7 +10,7 @@ class CustomTitleWithTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.sizeOf(context).width * 0.3,
+      width: MediaQuery.sizeOf(context).width * 0.45,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

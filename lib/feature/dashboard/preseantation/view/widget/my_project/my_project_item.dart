@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:portfolioapp/core/navigation/navigation_manager.dart';
 import 'package:portfolioapp/feature/dashboard/data/model/my_project_model.dart';
 import '../../../../../../core/shared_widget/global_text.dart';
 import '../../../../../../core/utils/app_color.dart';
+import '../../../../../project_details/presentation/view/project_details_screen.dart';
 
 class MyProjectItem extends StatelessWidget {
   const MyProjectItem(
@@ -41,6 +43,7 @@ class MyProjectItem extends StatelessWidget {
                   backgroundColor: AppSharedColors.accentOrange),
               onPressed: () {
                 myProjectModel.onTap.call();
+                NavigationManager.push(ProjectDetailsScreen.id);
               },
               child: const GText(content: "See Project", fontSize: 19)),
         ],
