@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolioapp/core/utils/size_config.dart';
 
 import '../../../../data/model/my_project_list.dart';
 import 'my_project_item.dart';
@@ -13,12 +14,15 @@ class CustomGridViewMyProject extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: myProjectList.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4, // Two items in one row
+        crossAxisCount:
+        MediaQuery.sizeOf(context).width <SizeConfig.desktopSize?
+          3 : 4, // Two items in one row
         crossAxisSpacing: MediaQuery.sizeOf(context).width *
             0.02, // Horizontal space between grid items
         mainAxisSpacing: MediaQuery.sizeOf(context).height * 0.04,
         childAspectRatio:
-            0.95, // Aspect ratio for each grid item (width / height)
+        MediaQuery.sizeOf(context).width <SizeConfig.desktopSize?
+            1.03 :0.95, // Aspect ratio for each grid item (width / height)
       ),
       itemBuilder: (context, index) {
         return MyProjectItem(
