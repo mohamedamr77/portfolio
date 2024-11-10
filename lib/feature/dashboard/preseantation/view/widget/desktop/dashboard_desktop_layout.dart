@@ -10,38 +10,30 @@ import '../app_bar/custom_app_bar.dart';
 import '../introduction_section/introduction_section.dart';
 import '../my_project/my_project_section.dart';
 
-class DashboardDesktopLayout extends StatefulWidget {
-  const DashboardDesktopLayout({super.key});
+class DashboardDesktopLayout extends StatelessWidget {
+  final ScrollController scrollControllerPage;
+  final GlobalKey homeKey;
+  final GlobalKey aboutMeKey;
+  final GlobalKey servicesKey;
+  final GlobalKey projectsKey;
+  final GlobalKey certificatesKey;
+  final GlobalKey contactKey;
+  final Function(GlobalKey) scrollToSection;
 
-  @override
-  State<DashboardDesktopLayout> createState() => _DashboardDesktopLayoutState();
-}
-
-class _DashboardDesktopLayoutState extends State<DashboardDesktopLayout> {
-  final GlobalKey homeKey = GlobalKey();
-  final GlobalKey aboutMeKey = GlobalKey();
-  final GlobalKey servicesKey = GlobalKey();
-  final GlobalKey projectsKey = GlobalKey();
-  final GlobalKey certificatesKey = GlobalKey();
-  final GlobalKey contactKey = GlobalKey();
-  final GlobalKey downloadCvKey = GlobalKey();
-
-  final ScrollController scrollController = ScrollController();
-
-  void scrollToSection(GlobalKey key) {
-    final context = key.currentContext;
-    if (context != null) {
-      Scrollable.ensureVisible(
-        context,
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.easeInOut,
-      );
-    }
-  }
+  const DashboardDesktopLayout({
+    Key? key,
+    required this.scrollControllerPage,
+    required this.homeKey,
+    required this.aboutMeKey,
+    required this.servicesKey,
+    required this.projectsKey,
+    required this.certificatesKey,
+    required this.contactKey,
+    required this.scrollToSection,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     List<AppBarServiceModel> appBarServiceList = [
       AppBarServiceModel(
         title: AppText.home,
@@ -67,27 +59,23 @@ class _DashboardDesktopLayoutState extends State<DashboardDesktopLayout> {
         title: AppText.contact,
         onTap: () => scrollToSection(contactKey),
       ),
-      AppBarServiceModel(
-        title: AppText.downloadCv,
-        onTap: () => scrollToSection(downloadCvKey),
-      ),
     ];
 
     return CustomScrollView(
+      controller: scrollControllerPage,
       slivers: [
-        SliverToBoxAdapter(child: CustomAppBar(appBarServiceList:appBarServiceList,)),
-        SliverToBoxAdapter(child: IntroductionSection(key: homeKey)), // Ensure only homeKey is used here
+        SliverToBoxAdapter(child: CustomAppBar(appBarServiceList: appBarServiceList)),
+        SliverToBoxAdapter(child: IntroductionSection(key: homeKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: AboutMeSection(key: aboutMeKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: ServiceSection(key: servicesKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         MyProjectSection(key: projectsKey),
-        const SliverToBoxAdapter(child: SpaceBetweenSection(height: 30,)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection(height: 30)),
         SliverToBoxAdapter(child: CertificatesSection(key: certificatesKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: ContactSection(key: contactKey)),
-        const SliverToBoxAdapter(child: SpaceBetweenSection()),
       ],
     );
   }
