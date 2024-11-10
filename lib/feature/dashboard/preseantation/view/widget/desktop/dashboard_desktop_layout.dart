@@ -8,6 +8,7 @@ import '../../../../data/model/app_bar_service_model.dart';
 import '../about_me/about_me_section.dart';
 import '../app_bar/custom_app_bar.dart';
 import '../introduction_section/introduction_section.dart';
+import '../my_project/custom_grid_view_my_project.dart';
 import '../my_project/my_project_section.dart';
 
 class DashboardDesktopLayout extends StatefulWidget {
@@ -73,8 +74,27 @@ class _DashboardDesktopLayoutState extends State<DashboardDesktopLayout> {
       ),
     ];
 
-    return SingleChildScrollView(
-      child: Column(
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(child: CustomAppBar(appBarServiceList:appBarServiceList,)),
+        SliverToBoxAdapter(child: IntroductionSection(key: homeKey)), // Ensure only homeKey is used here
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
+        SliverToBoxAdapter(child: AboutMeSection(key: aboutMeKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
+        SliverToBoxAdapter(child: ServiceSection(key: servicesKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
+        MyProjectSection(key: projectsKey),
+        SliverToBoxAdapter(child: CertificatesSection(key: certificatesKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
+        SliverToBoxAdapter(child: ContactSection(key: contactKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
+      ],
+    );
+  }
+}
+
+/*
+ Column(
         children: [
           CustomAppBar(appBarServiceList:appBarServiceList,),
           IntroductionSection(key: homeKey), // Ensure only homeKey is used here
@@ -90,6 +110,4 @@ class _DashboardDesktopLayoutState extends State<DashboardDesktopLayout> {
           const SpaceBetweenSection(),
         ],
       ),
-    );
-  }
-}
+ */

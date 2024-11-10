@@ -76,8 +76,6 @@ class _ContactSectionState extends State<ContactSection> {
                 // phone: _phoneController.text,
                 message: _messageController.text,
               );
-
-
               // SendMessageService.sendSMSMessage(
               //   phone: '+201157280800',
               //   message: 'Name: ${_nameController.text}\nMessage: ${_messageController.text}',
