@@ -18,8 +18,7 @@ class HireMeButton extends StatelessWidget {
         width: 0.1.w,
         height: 0.07.h,
         borderRadius: BorderRadius.circular(5),
-        onPress: (){},
-        // onPress: SendMessageService.sendEmail,
+        onPress: SendMessageService.sendEmail,
         child: const GText(content: AppText.hireMe, fontSize: 21));
   }
 
