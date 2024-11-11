@@ -63,7 +63,7 @@ class _DashboardBodyState extends State<DashboardBody> {
         certificatesKey: certificatesKey,
         contactKey: contactKey,
         scrollToSection: scrollToSection,
-      ),
+      ), smallPhonesLayout: (context) => const SizedBox(),
     );
   }
 }
