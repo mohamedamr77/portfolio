@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/tablet/dashboard_tablet_layout.dart';
 import '../../../../../core/shared_widget/adabtive_layout.dart';
-import 'dashboard_mobile_layout.dart';
+import 'mobile_layout/dashboard_mobile_layout.dart';
 import 'desktop/dashboard_desktop_layout.dart';
 
 class DashboardBody extends StatefulWidget {

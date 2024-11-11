@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/core/shared_widget/custom_text_with_desc.dart';
 import 'package:portfolioapp/core/utils/app_text.dart';
+import 'package:portfolioapp/core/utils/size_config.dart';
+import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/desktop/service_list_mobile_layout.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/services_section/service_list.dart';
 
 class ServiceSection extends StatelessWidget {
@@ -8,14 +10,19 @@ class ServiceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       children: [
-        CustomTitleWithDescription(
+        const CustomTitleWithDescription(
             title: AppText.services, description: AppText.description1),
-        SizedBox(
+        const SizedBox(
           height: 60,
         ),
-        ServiceList(),
+        Visibility(
+            visible: MediaQuery.sizeOf(context).width > SizeConfig.tabletSize,
+            child: const ServiceList()),
+        Visibility(
+            visible: MediaQuery.sizeOf(context).width <= SizeConfig.tabletSize,
+            child: const ServiceListMobileLayout()),
       ],
     );
   }

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/services_section/service_section.dart';
 
-import '../../../../../../core/shared_widget/space_between_section.dart';
-import '../../../../../../core/utils/app_text.dart';
-import '../../../data/model/app_bar_service_model.dart';
-import 'about_me/about_me_section.dart';
-import 'certificates/certificates_section.dart';
-import 'contact/contact_section.dart';
-import 'introduction_section/introduction_section.dart';
-import 'my_project/my_project_section.dart';
+import '../../../../../../../core/shared_widget/space_between_section.dart';
+import '../../../../../../../core/utils/app_text.dart';
+import '../../../../data/model/app_bar_service_model.dart';
+import '../about_me/about_me_section.dart';
+import '../certificates/certificates_section.dart';
+import '../contact/contact_section.dart';
+import '../introduction_section/introduction_section.dart';
+import '../my_project/my_project_section.dart';
 
 
 class DashboardMobileLayout extends StatelessWidget {
