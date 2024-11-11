@@ -15,16 +15,12 @@ class CustomGridViewMyProject extends StatelessWidget {
       itemCount: myProjectList.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount:
-            MediaQuery.sizeOf(context).width < SizeConfig.desktopSize
-                ? 3
-                : 4, // Two items in one row
+        crossAxisCount(context),// Two items in one row
         crossAxisSpacing: MediaQuery.sizeOf(context).width *
             0.02, // Horizontal space between grid items
         mainAxisSpacing: MediaQuery.sizeOf(context).height * 0.04,
         childAspectRatio:
-            MediaQuery.sizeOf(context).width < SizeConfig.desktopSize
-                ? 1.01
-                : 0.95, // Aspect ratio for each grid item (width / height)
+        childAspectRatio( context) // Aspect ratio for each grid item (width / height)
       ),
       itemBuilder: (context, index) {
         return MyProjectItem(
@@ -34,4 +30,36 @@ class CustomGridViewMyProject extends StatelessWidget {
       },
     );
   }
+}
+
+int crossAxisCount(BuildContext context ){
+    if (
+    MediaQuery.sizeOf(context).width < SizeConfig.mobileSize) {
+      return 2;
+    } else if (   MediaQuery.sizeOf(context).width < SizeConfig.tabletSize) {
+      return 2;
+    }
+    else if ( MediaQuery.sizeOf(context).width < SizeConfig.desktopSize) {
+      return 3;
+    } else {
+      return 4;
+    }
+}
+
+
+double  childAspectRatio(BuildContext context){
+  if (MediaQuery.sizeOf(context).width < SizeConfig.mobileSize) {
+    return 1.1;
+  } else if ( MediaQuery.sizeOf(context).width < SizeConfig.tabletSize && MediaQuery.sizeOf(context).width > 684 ) {
+    return 1.2;
+  }
+  else if ( MediaQuery.sizeOf(context).width < SizeConfig.tabletSize && (MediaQuery.sizeOf(context).width >= SizeConfig.mobileSize )) {
+    return 1.04;
+  }
+  else if ( MediaQuery.sizeOf(context).width < SizeConfig.desktopSize) {
+    return 1.02;
+  } else {
+    return 1.01;
+  }
+
 }
