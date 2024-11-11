@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/shared_widget/global_text.dart';
+import '../../../../../../core/utils/size_config.dart';
 
 class CustomBoldText extends StatelessWidget {
   const CustomBoldText({super.key, required this.text});
@@ -12,7 +13,9 @@ class CustomBoldText extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: GText(
           content: text,
-          fontSize: 100,
+          fontSize:
+          MediaQuery.sizeOf(context).width > SizeConfig.tabletSize ?
+          100 : 60,
           fontWeight: FontWeight.w700,
         ));
   }

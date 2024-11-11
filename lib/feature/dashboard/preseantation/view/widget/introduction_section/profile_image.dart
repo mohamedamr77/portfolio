@@ -7,6 +7,7 @@ import 'package:portfolioapp/core/extentions/screen_size.dart';
 import 'package:portfolioapp/core/utils/app_images.dart';
 
 import '../../../../../../core/utils/const_box.dart';
+import '../../../../../../core/utils/size_config.dart';
 
 class ProfileImage extends StatelessWidget {
   const ProfileImage({super.key});
@@ -22,8 +23,13 @@ class ProfileImage extends StatelessWidget {
                 ? AppImages.moAmrCircleBlack
                 : AppImages.moAmrCircleWhite,
           ),
-          height: 250,
-          width: 300,
+          height:
+          MediaQuery.sizeOf(context).width > SizeConfig.tabletSize ?
+              250 :
+              200,
+          width:
+          MediaQuery.sizeOf(context).width > SizeConfig.tabletSize ?
+            300 :200,
         );
       },
     );
