@@ -8,17 +8,14 @@ class ImageAndSocialIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const ProfileImage(),
-        Visibility(
-          visible: MediaQuery.sizeOf(context).width >= SizeConfig.desktopSize,
-          child: const SizedBox(
-            height: 40,
-          ),
+        ProfileImage(),
+        SizedBox(
+          height: 40,
         ),
-        const SocialIcons(),
+        SocialIcons(),
       ],
     );
   }
