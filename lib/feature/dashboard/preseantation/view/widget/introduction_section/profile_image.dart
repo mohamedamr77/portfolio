@@ -23,13 +23,12 @@ class ProfileImage extends StatelessWidget {
                 ? AppImages.moAmrCircleBlack
                 : AppImages.moAmrCircleWhite,
           ),
-          height:
-          MediaQuery.sizeOf(context).width > SizeConfig.tabletSize ?
-              250 :
-              200,
-          width:
-          MediaQuery.sizeOf(context).width > SizeConfig.tabletSize ?
-            300 :200,
+          height: MediaQuery.sizeOf(context).width > SizeConfig.tabletSize
+              ? 250
+              : 200,
+          width: MediaQuery.sizeOf(context).width > SizeConfig.tabletSize
+              ? 300
+              : 200,
         );
       },
     );

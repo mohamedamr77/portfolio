@@ -10,7 +10,6 @@ import '../contact/contact_section.dart';
 import '../introduction_section/introduction_section.dart';
 import '../my_project/my_project_section.dart';
 
-
 class DashboardMobileLayout extends StatelessWidget {
   final ScrollController scrollControllerPage;
   final GlobalKey homeKey;
@@ -29,7 +28,8 @@ class DashboardMobileLayout extends StatelessWidget {
     required this.servicesKey,
     required this.projectsKey,
     required this.certificatesKey,
-    required this.contactKey, required this.scrollToSection,
+    required this.contactKey,
+    required this.scrollToSection,
   });
 
   @override

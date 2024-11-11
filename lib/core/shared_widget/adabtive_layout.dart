@@ -6,8 +6,12 @@ class AdaptiveLayout extends StatelessWidget {
       {super.key,
       required this.mobileLayout,
       required this.tabletLayout,
-      required this.desktopLayout, required this.smallPhonesLayout });
-  final WidgetBuilder mobileLayout, tabletLayout, desktopLayout , smallPhonesLayout;
+      required this.desktopLayout,
+      required this.smallPhonesLayout});
+  final WidgetBuilder mobileLayout,
+      tabletLayout,
+      desktopLayout,
+      smallPhonesLayout;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class AdaptiveLayout extends StatelessWidget {
           return smallPhonesLayout(context);
         } else if (constraints.maxWidth < SizeConfig.tabletSize) {
           return mobileLayout(context);
-        } else  if (constraints.maxWidth < SizeConfig.desktopSize) {
+        } else if (constraints.maxWidth < SizeConfig.desktopSize) {
           return tabletLayout(context);
         } else {
           return desktopLayout(context);

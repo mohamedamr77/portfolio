@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolioapp/core/utils/size_config.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/introduction_section/profile_image.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/introduction_section/social_icons.dart';
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:portfolioapp/core/extentions/screen_size.dart';
 import 'package:portfolioapp/core/utils/send_message_service.dart';
 

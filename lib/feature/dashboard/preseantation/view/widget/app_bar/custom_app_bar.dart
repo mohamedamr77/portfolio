@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolioapp/core/shared_widget/global_text.dart';
-import '../../../../../../core/utils/size_config.dart';
 import 'button_swtich_theme.dart';
 import 'list_appbar_service_item.dart';
 

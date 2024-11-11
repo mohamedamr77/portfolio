@@ -29,7 +29,8 @@ class DashboardTabletLayout extends StatelessWidget {
     required this.servicesKey,
     required this.projectsKey,
     required this.certificatesKey,
-    required this.contactKey, required this.scrollToSection,
+    required this.contactKey,
+    required this.scrollToSection,
   });
 
   @override
@@ -64,7 +65,8 @@ class DashboardTabletLayout extends StatelessWidget {
     return CustomScrollView(
       controller: scrollControllerPage,
       slivers: [
-        SliverToBoxAdapter(child: CustomAppBar(appBarServiceList: appBarServiceList)),
+        SliverToBoxAdapter(
+            child: CustomAppBar(appBarServiceList: appBarServiceList)),
         SliverToBoxAdapter(child: IntroductionSection(key: homeKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: AboutMeSection(key: aboutMeKey)),

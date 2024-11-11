@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/core/shared_widget/custom_text_with_desc.dart';
 import 'package:portfolioapp/core/utils/app_text.dart';
-import '../../../../data/model/my_project_list.dart';
 import 'cached_custom_grid_view_my_project.dart';
-import 'my_project_item.dart';
 
 class MyProjectSection extends StatelessWidget {
   const MyProjectSection({super.key});

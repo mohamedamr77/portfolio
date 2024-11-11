@@ -36,14 +36,15 @@ class _DashboardBodyState extends State<DashboardBody> {
   Widget build(BuildContext context) {
     debugPrint("Width : ${MediaQuery.of(context).size.width}");
     return AdaptiveLayout(
-      mobileLayout: (context) =>  DashboardMobileLayout(
+      mobileLayout: (context) => DashboardMobileLayout(
         scrollControllerPage: scrollController,
         homeKey: homeKey,
         aboutMeKey: aboutMeKey,
         servicesKey: servicesKey,
         projectsKey: projectsKey,
         certificatesKey: certificatesKey,
-        contactKey: contactKey, scrollToSection: scrollToSection,
+        contactKey: contactKey,
+        scrollToSection: scrollToSection,
       ),
       tabletLayout: (context) => DashboardTabletLayout(
         scrollControllerPage: scrollController,
@@ -52,7 +53,8 @@ class _DashboardBodyState extends State<DashboardBody> {
         servicesKey: servicesKey,
         projectsKey: projectsKey,
         certificatesKey: certificatesKey,
-        contactKey: contactKey, scrollToSection: scrollToSection,
+        contactKey: contactKey,
+        scrollToSection: scrollToSection,
       ),
       desktopLayout: (context) => DashboardDesktopLayout(
         scrollControllerPage: scrollController,
@@ -63,7 +65,8 @@ class _DashboardBodyState extends State<DashboardBody> {
         certificatesKey: certificatesKey,
         contactKey: contactKey,
         scrollToSection: scrollToSection,
-      ), smallPhonesLayout: (context) => const SizedBox(),
+      ),
+      smallPhonesLayout: (context) => const SizedBox(),
     );
   }
 }

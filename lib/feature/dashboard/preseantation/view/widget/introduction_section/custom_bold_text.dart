@@ -13,9 +13,9 @@ class CustomBoldText extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: GText(
           content: text,
-          fontSize:
-          MediaQuery.sizeOf(context).width > SizeConfig.tabletSize ?
-          100 : 60,
+          fontSize: MediaQuery.sizeOf(context).width > SizeConfig.tabletSize
+              ? 100
+              : 60,
           fontWeight: FontWeight.w700,
         ));
   }
