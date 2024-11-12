@@ -9,7 +9,6 @@ class DashboardCubit extends Cubit<DashboardState> {
 
   final ScrollController scrollController = ScrollController();
 
-
   updateSelectedItemDrawerIndex(int index) {
     appBarServiceIndex = index;
     emit(DashboardAppBarServiceChangeIndexState());
@@ -42,5 +41,4 @@ class DashboardCubit extends Cubit<DashboardState> {
   void dispose() {
     scrollController.dispose();
   }
-
 }

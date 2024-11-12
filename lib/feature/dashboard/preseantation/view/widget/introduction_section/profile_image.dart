@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:portfolioapp/core/cubit/theme/get_cubit.dart';
 import 'package:portfolioapp/core/cubit/theme/get_state.dart';
-import 'package:portfolioapp/core/extentions/screen_size.dart';
 import 'package:portfolioapp/core/utils/app_images.dart';
 
 import '../../../../../../core/utils/const_box.dart';

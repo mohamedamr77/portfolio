@@ -16,12 +16,11 @@ class DashboardMobileLayout extends StatelessWidget {
   const DashboardMobileLayout({
     super.key,
     required this.scrollControllerPage,
-
   });
 
   @override
   Widget build(BuildContext context) {
-    var cubit =BlocProvider.of<DashboardCubit>(context);
+    var cubit = BlocProvider.of<DashboardCubit>(context);
 
     return CustomScrollView(
       controller: scrollControllerPage,
@@ -35,7 +34,8 @@ class DashboardMobileLayout extends StatelessWidget {
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         MyProjectSection(key: cubit.projectsKey),
         const SliverToBoxAdapter(child: SpaceBetweenSection(height: 30)),
-        SliverToBoxAdapter(child: CertificatesSection(key: cubit.certificatesKey)),
+        SliverToBoxAdapter(
+            child: CertificatesSection(key: cubit.certificatesKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: ContactSection(key: cubit.contactKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),

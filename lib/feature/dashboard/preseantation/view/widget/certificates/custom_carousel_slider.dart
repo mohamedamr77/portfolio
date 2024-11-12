@@ -16,8 +16,10 @@ class CustomCarouselSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = BlocProvider.of<DashboardCubit>(context);
     final double screenWidth = MediaQuery.of(context).size.width;
-    final double aspectRatio = screenWidth < SizeConfig.tabletSize ? 16 / 9 : 1087 / 300;
-    final double viewportFraction = screenWidth < SizeConfig.tabletSize ? 0.9 : 0.45;
+    final double aspectRatio =
+        screenWidth < SizeConfig.tabletSize ? 16 / 9 : 1087 / 300;
+    final double viewportFraction =
+        screenWidth < SizeConfig.tabletSize ? 0.9 : 0.45;
 
     return BlocBuilder<DashboardCubit, DashboardState>(
       builder: (context, state) {
@@ -27,10 +29,10 @@ class CustomCarouselSlider extends StatelessWidget {
               itemCount: certificateList.length,
               itemBuilder:
                   (BuildContext context, int itemIndex, int pageViewIndex) =>
-                  CarouselSliderItem(
-                    itemIndex: itemIndex,
-                    certificateModel: certificateList[itemIndex],
-                  ),
+                      CarouselSliderItem(
+                itemIndex: itemIndex,
+                certificateModel: certificateList[itemIndex],
+              ),
               options: CarouselOptions(
                 autoPlayCurve: Curves.fastOutSlowIn,
                 autoPlay: true,
@@ -49,7 +51,7 @@ class CustomCarouselSlider extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
                 certificateList.length,
-                    (index) {
+                (index) {
                   return Container(
                     margin: const EdgeInsets.all(3),
                     height: 0.015.h,

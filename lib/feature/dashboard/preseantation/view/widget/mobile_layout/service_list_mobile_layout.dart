@@ -11,8 +11,10 @@ class ServiceListMobileLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Split the servicesList into two lists
-    final List<ServiceModel> firstHalf = servicesList.sublist(0, servicesList.length ~/ 2);
-    final List<ServiceModel> secondHalf = servicesList.sublist(servicesList.length ~/ 2);
+    final List<ServiceModel> firstHalf =
+        servicesList.sublist(0, servicesList.length ~/ 2);
+    final List<ServiceModel> secondHalf =
+        servicesList.sublist(servicesList.length ~/ 2);
 
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 0.1.w),
@@ -22,7 +24,7 @@ class ServiceListMobileLayout extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
               firstHalf.length,
-                  (index) {
+              (index) {
                 return Expanded(
                   child: ServiceItemListBody(
                     serviceModel: firstHalf[index],
@@ -34,12 +36,14 @@ class ServiceListMobileLayout extends StatelessWidget {
               },
             ),
           ),
-          const SizedBox(height: 30,),
+          const SizedBox(
+            height: 30,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
               secondHalf.length,
-                  (index) {
+              (index) {
                 return Expanded(
                   child: ServiceItemListBody(
                     serviceModel: secondHalf[index],

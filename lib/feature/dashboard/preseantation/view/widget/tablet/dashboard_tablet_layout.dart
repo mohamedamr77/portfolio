@@ -26,7 +26,9 @@ class DashboardTabletLayout extends StatelessWidget {
     return CustomScrollView(
       controller: scrollControllerPage,
       slivers: [
-        SliverToBoxAdapter(child: CustomAppBar(appBarServiceList: getAppBarServiceList(cubit))),
+        SliverToBoxAdapter(
+            child:
+                CustomAppBar(appBarServiceList: getAppBarServiceList(cubit))),
         SliverToBoxAdapter(child: IntroductionSection(key: cubit.homeKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: AboutMeSection(key: cubit.aboutMeKey)),
@@ -35,7 +37,8 @@ class DashboardTabletLayout extends StatelessWidget {
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         MyProjectSection(key: cubit.projectsKey),
         const SliverToBoxAdapter(child: SpaceBetweenSection(height: 30)),
-        SliverToBoxAdapter(child: CertificatesSection(key: cubit.certificatesKey)),
+        SliverToBoxAdapter(
+            child: CertificatesSection(key: cubit.certificatesKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: ContactSection(key: cubit.contactKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),

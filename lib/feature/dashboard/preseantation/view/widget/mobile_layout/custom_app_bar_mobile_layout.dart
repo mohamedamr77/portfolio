@@ -11,8 +11,9 @@ class CustomAppBarMobileLayout extends StatelessWidget {
         onPressed: () {
           Scaffold.of(context).openEndDrawer();
         },
-        icon: Icon(Icons.dashboard_customize_rounded),),
-       leading: ButtonSwitchTheme() ,
-     );
+        icon: const Icon(Icons.dashboard_customize_rounded),
+      ),
+      leading: const ButtonSwitchTheme(),
+    );
   }
 }

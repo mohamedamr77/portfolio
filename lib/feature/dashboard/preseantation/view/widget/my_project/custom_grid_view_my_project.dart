@@ -14,14 +14,13 @@ class CustomGridViewMyProject extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: myProjectList.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount:
-        crossAxisCount(context),// Two items in one row
-        crossAxisSpacing: MediaQuery.sizeOf(context).width *
-            0.02, // Horizontal space between grid items
-        mainAxisSpacing: MediaQuery.sizeOf(context).height * 0.04,
-        childAspectRatio:
-        childAspectRatio( context) // Aspect ratio for each grid item (width / height)
-      ),
+          crossAxisCount: crossAxisCount(context), // Two items in one row
+          crossAxisSpacing: MediaQuery.sizeOf(context).width *
+              0.02, // Horizontal space between grid items
+          mainAxisSpacing: MediaQuery.sizeOf(context).height * 0.04,
+          childAspectRatio: childAspectRatio(
+              context) // Aspect ratio for each grid item (width / height)
+          ),
       itemBuilder: (context, index) {
         return MyProjectItem(
           index: index,
@@ -32,34 +31,30 @@ class CustomGridViewMyProject extends StatelessWidget {
   }
 }
 
-int crossAxisCount(BuildContext context ){
-    if (
-    MediaQuery.sizeOf(context).width < SizeConfig.mobileSize) {
-      return 2;
-    } else if (   MediaQuery.sizeOf(context).width < SizeConfig.tabletSize) {
-      return 2;
-    }
-    else if ( MediaQuery.sizeOf(context).width < SizeConfig.desktopSize) {
-      return 3;
-    } else {
-      return 4;
-    }
+int crossAxisCount(BuildContext context) {
+  if (MediaQuery.sizeOf(context).width < SizeConfig.mobileSize) {
+    return 2;
+  } else if (MediaQuery.sizeOf(context).width < SizeConfig.tabletSize) {
+    return 2;
+  } else if (MediaQuery.sizeOf(context).width < SizeConfig.desktopSize) {
+    return 3;
+  } else {
+    return 4;
+  }
 }
 
-
-double  childAspectRatio(BuildContext context){
+double childAspectRatio(BuildContext context) {
   if (MediaQuery.sizeOf(context).width < SizeConfig.mobileSize) {
     return 1.1;
-  } else if ( MediaQuery.sizeOf(context).width < SizeConfig.tabletSize && MediaQuery.sizeOf(context).width > 684 ) {
+  } else if (MediaQuery.sizeOf(context).width < SizeConfig.tabletSize &&
+      MediaQuery.sizeOf(context).width > 684) {
     return 1.2;
-  }
-  else if ( MediaQuery.sizeOf(context).width < SizeConfig.tabletSize && (MediaQuery.sizeOf(context).width >= SizeConfig.mobileSize )) {
+  } else if (MediaQuery.sizeOf(context).width < SizeConfig.tabletSize &&
+      (MediaQuery.sizeOf(context).width >= SizeConfig.mobileSize)) {
     return 1.04;
-  }
-  else if ( MediaQuery.sizeOf(context).width < SizeConfig.desktopSize) {
+  } else if (MediaQuery.sizeOf(context).width < SizeConfig.desktopSize) {
     return 1.02;
   } else {
     return 1.01;
   }
-
 }

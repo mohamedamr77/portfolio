@@ -15,8 +15,8 @@ class DashboardDesktopLayout extends StatelessWidget {
   final ScrollController scrollControllerPage;
 
   const DashboardDesktopLayout({
-    super.key, required this.scrollControllerPage,
-
+    super.key,
+    required this.scrollControllerPage,
   });
 
   @override
@@ -25,20 +25,22 @@ class DashboardDesktopLayout extends StatelessWidget {
     return CustomScrollView(
       controller: scrollControllerPage,
       slivers: [
-    SliverToBoxAdapter(
-    child: CustomAppBar(appBarServiceList: getAppBarServiceList(cubit))),
-    SliverToBoxAdapter(child: IntroductionSection(key: cubit.homeKey)),
-    const SliverToBoxAdapter(child: SpaceBetweenSection()),
-    SliverToBoxAdapter(child: AboutMeSection(key: cubit.aboutMeKey)),
-    const SliverToBoxAdapter(child: SpaceBetweenSection()),
-    SliverToBoxAdapter(child: ServiceSection(key: cubit.servicesKey)),
-    const SliverToBoxAdapter(child: SpaceBetweenSection()),
-    MyProjectSection(key: cubit.projectsKey),
-    const SliverToBoxAdapter(child: SpaceBetweenSection(height: 30)),
-    SliverToBoxAdapter(child: CertificatesSection(key: cubit.certificatesKey)),
-    const SliverToBoxAdapter(child: SpaceBetweenSection()),
-    SliverToBoxAdapter(child: ContactSection(key: cubit.contactKey)),
-    const SliverToBoxAdapter(child: SpaceBetweenSection()),
+        SliverToBoxAdapter(
+            child:
+                CustomAppBar(appBarServiceList: getAppBarServiceList(cubit))),
+        SliverToBoxAdapter(child: IntroductionSection(key: cubit.homeKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
+        SliverToBoxAdapter(child: AboutMeSection(key: cubit.aboutMeKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
+        SliverToBoxAdapter(child: ServiceSection(key: cubit.servicesKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
+        MyProjectSection(key: cubit.projectsKey),
+        const SliverToBoxAdapter(child: SpaceBetweenSection(height: 30)),
+        SliverToBoxAdapter(
+            child: CertificatesSection(key: cubit.certificatesKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
+        SliverToBoxAdapter(child: ContactSection(key: cubit.contactKey)),
+        const SliverToBoxAdapter(child: SpaceBetweenSection()),
       ],
     );
   }
