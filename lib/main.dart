@@ -8,8 +8,9 @@ import 'core/navigation/navigation_manager.dart';
 import 'core/navigation/routes.dart';
 import 'core/utils/const_box.dart';
 import 'core/utils/const_variables.dart';
-import 'feature/dashboard/preseantation/view/dashboard_screen.dart';
-import 'feature/dashboard/preseantation/view_model/dashboard_controller/dashboard_cubit.dart';
+
+import 'feature/protfolio/preseantation/view/dashboard_screen.dart';
+import 'feature/protfolio/preseantation/view_model/dashboard_controller/dashboard_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +23,7 @@ void main() async {
         create: (context) => GetThemeCubit(),
       ),
       BlocProvider(
-        create: (context) => DashboardCubit(),
+        create: (context) => PortfolioCubit(),
       ),
     ],
     child:  const MyApp(),
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
                     : ThemeMode.light,
                 navigatorKey: NavigationManager.navigationKey,
                 routes: AppRouter.routes,
-                initialRoute: DashboardScreen.id,
+                initialRoute: PortfolioScreen.id,
               );
             },
           ),
