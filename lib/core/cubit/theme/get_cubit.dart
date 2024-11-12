@@ -6,7 +6,7 @@ import 'get_state.dart';
 
 class GetThemeCubit extends Cubit<GetThemeState> {
   GetThemeCubit() : super(GetThemeState());
-  bool isDark = false;
+  bool isDark = true;
 
   void initTheme() {
     if (state is ChangeThemingState) {
@@ -15,7 +15,7 @@ class GetThemeCubit extends Cubit<GetThemeState> {
     var box = Hive.box(BoxApp.kThemeBox);
     final isDark = box.get(
       "isDark",
-      defaultValue: false,
+      defaultValue: true,
     );
     this.isDark = isDark;
     emit(ChangeThemingState());
@@ -30,6 +30,6 @@ class GetThemeCubit extends Cubit<GetThemeState> {
 
   setSwitchValueFromHive() {
     var box = Hive.box(BoxApp.kThemeBox);
-    isDark = box.get('isDark') ?? false;
+    isDark = box.get('isDark') ?? true;
   }
 }

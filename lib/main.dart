@@ -51,8 +51,9 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 theme: lightMode,
                 darkTheme: darkMode,
-                themeMode: Hive.box(BoxApp.kThemeBox).get('isDark') == true
-                    ? ThemeMode.dark
+                themeMode: Hive.box(BoxApp.kThemeBox).get('isDark') == null ||
+                    Hive.box(BoxApp.kThemeBox).get('isDark') == true
+                ? ThemeMode.dark
                     : ThemeMode.light,
                 navigatorKey: NavigationManager.navigationKey,
                 routes: AppRouter.routes,

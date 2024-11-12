@@ -17,8 +17,7 @@ class ProfileImage extends StatelessWidget {
       builder: (context, state) {
         return Image(
           image: AssetImage(
-            Hive.box(BoxApp.kThemeBox).get('isDark') == true ||
-                    BlocProvider.of<GetThemeCubit>(context).isDark
+            Hive.box(BoxApp.kThemeBox).get('isDark')  == null || Hive.box(BoxApp.kThemeBox).get('isDark') == true
                 ? AppImages.moAmrCircleBlack
                 : AppImages.moAmrCircleWhite,
           ),

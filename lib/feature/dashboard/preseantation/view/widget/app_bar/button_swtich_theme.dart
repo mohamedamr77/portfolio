@@ -16,7 +16,7 @@ class ButtonSwitchTheme extends StatelessWidget {
         return Switch(
             // activeTrackColor: Theme.of(context).primaryColor,
             activeColor: AppSharedColors.accentOrange,
-            value: Hive.box(BoxApp.kThemeBox).get('isDark') ?? false,
+            value: Hive.box(BoxApp.kThemeBox).get('isDark') ?? true,
             onChanged: (value) {
               BlocProvider.of<GetThemeCubit>(context).changeTheme(value);
             });
