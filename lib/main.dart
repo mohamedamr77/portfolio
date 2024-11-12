@@ -1,3 +1,5 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -8,8 +10,7 @@ import 'core/navigation/navigation_manager.dart';
 import 'core/navigation/routes.dart';
 import 'core/utils/const_box.dart';
 import 'core/utils/const_variables.dart';
-
-import 'feature/protfolio/preseantation/view/dashboard_screen.dart';
+import 'feature/protfolio/preseantation/view/protfolio_view.dart';
 import 'feature/protfolio/preseantation/view_model/dashboard_controller/dashboard_cubit.dart';
 
 void main() async {
@@ -26,7 +27,10 @@ void main() async {
         create: (context) => PortfolioCubit(),
       ),
     ],
-    child:  const MyApp(),
+    child:    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => const MyApp(), // Wrap your app
+    ),
   ));
 }
 

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/core/shared_widget/custom_text_with_desc.dart';
 import 'package:portfolioapp/core/utils/app_text.dart';
+import 'package:portfolioapp/core/utils/size_config.dart';
+import '../../../../data/model/my_project_list.dart';
 import 'cached_custom_grid_view_my_project.dart';
+import 'custom_list_view_my_project.dart';
+import 'my_project_item.dart';
 
 class MyProjectSection extends StatelessWidget {
   const MyProjectSection({super.key});
@@ -19,7 +23,10 @@ class MyProjectSection extends StatelessWidget {
             height: 40,
           );
         } else {
-          return const CachedCustomGridViewMyProject();
+          return
+            MediaQuery.sizeOf(context).width <SizeConfig.mobileSize ?
+            const CustomListViewMyProject()    :
+            const CachedCustomGridViewMyProject() ;
         }
       },
     );

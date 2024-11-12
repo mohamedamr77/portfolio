@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../feature/project_details/presentation/view/project_details_screen.dart';
-import '../../feature/protfolio/preseantation/view/dashboard_screen.dart';
+import '../../feature/protfolio/preseantation/view/protfolio_view.dart';
 
 class AppRouter {
   static Map<String, Widget Function(dynamic)> routes = {

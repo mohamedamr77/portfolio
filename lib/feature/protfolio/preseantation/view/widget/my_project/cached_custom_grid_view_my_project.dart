@@ -9,9 +9,7 @@ class CachedCustomGridViewMyProject extends StatefulWidget {
       _CachedCustomGridViewMyProjectState();
 }
 
-class _CachedCustomGridViewMyProjectState
-    extends State<CachedCustomGridViewMyProject>
-    with AutomaticKeepAliveClientMixin {
+class _CachedCustomGridViewMyProjectState extends State<CachedCustomGridViewMyProject> with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
     super.build(context);

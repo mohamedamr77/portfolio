@@ -12,8 +12,8 @@ List<MyProjectModel> myProjectList = [
     codeInGithubPath: 'https://play.google.com/store/apps/details?id=com.t5x.fitdiet',
   ),
   MyProjectModel(
-    title: AppText.PortfolioApp,
-    imagePath: AppImages.PortfolioApp,
+    title: AppText.dashboardApp,
+    imagePath: AppImages.dashboardApp,
     onTap: () {},
     videoPath: '',
     codeInGithubPath: AppText.PortfolioCourseGithub,
