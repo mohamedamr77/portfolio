@@ -9,7 +9,7 @@ List<MyProjectModel> myProjectList = [
     imagePath: AppImages.perfectBody,
     onTap: () {},
     videoPath: '',
-    codeInGithubPath: '',
+    codeInGithubPath: 'https://play.google.com/store/apps/details?id=com.t5x.fitdiet',
   ),
   MyProjectModel(
     title: AppText.dashboardApp,
