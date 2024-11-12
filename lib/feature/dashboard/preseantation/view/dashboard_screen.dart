@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/dashboard_body.dart';
+import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/mobile_layout/custom_drawer.dart';
 
 class DashboardScreen extends StatelessWidget {
   static const id = "/DashboardScreen";
@@ -8,10 +9,9 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  const Scaffold(
       body: DashboardBody(),
+      endDrawer: CustomDrawer(),
     );
   }
 }
-
-// appBar: MediaQuery.sizeOf(context).width<SizeConfig.desktopSize ? AppBar():null,

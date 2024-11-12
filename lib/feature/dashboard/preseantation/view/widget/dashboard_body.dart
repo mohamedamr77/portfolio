@@ -14,57 +14,18 @@ class DashboardBody extends StatefulWidget {
 class _DashboardBodyState extends State<DashboardBody> {
   final ScrollController scrollController = ScrollController();
 
-  final GlobalKey homeKey = GlobalKey();
-  final GlobalKey aboutMeKey = GlobalKey();
-  final GlobalKey servicesKey = GlobalKey();
-  final GlobalKey projectsKey = GlobalKey();
-  final GlobalKey certificatesKey = GlobalKey();
-  final GlobalKey contactKey = GlobalKey();
-
-  void scrollToSection(GlobalKey key) {
-    final context = key.currentContext;
-    if (context != null) {
-      Scrollable.ensureVisible(
-        context,
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.easeInOut,
-      );
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     debugPrint("Width : ${MediaQuery.of(context).size.width}");
     return AdaptiveLayout(
       mobileLayout: (context) => DashboardMobileLayout(
         scrollControllerPage: scrollController,
-        homeKey: homeKey,
-        aboutMeKey: aboutMeKey,
-        servicesKey: servicesKey,
-        projectsKey: projectsKey,
-        certificatesKey: certificatesKey,
-        contactKey: contactKey,
-        scrollToSection: scrollToSection,
       ),
       tabletLayout: (context) => DashboardTabletLayout(
         scrollControllerPage: scrollController,
-        homeKey: homeKey,
-        aboutMeKey: aboutMeKey,
-        servicesKey: servicesKey,
-        projectsKey: projectsKey,
-        certificatesKey: certificatesKey,
-        contactKey: contactKey,
-        scrollToSection: scrollToSection,
       ),
       desktopLayout: (context) => DashboardDesktopLayout(
         scrollControllerPage: scrollController,
-        homeKey: homeKey,
-        aboutMeKey: aboutMeKey,
-        servicesKey: servicesKey,
-        projectsKey: projectsKey,
-        certificatesKey: certificatesKey,
-        contactKey: contactKey,
-        scrollToSection: scrollToSection,
       ),
       smallPhonesLayout: (context) => const SizedBox(),
     );

@@ -17,6 +17,7 @@ class CustomCarouselSlider extends StatelessWidget {
     final cubit = BlocProvider.of<DashboardCubit>(context);
     final double screenWidth = MediaQuery.of(context).size.width;
     final double aspectRatio = screenWidth < SizeConfig.tabletSize ? 16 / 9 : 1087 / 300;
+    final double viewportFraction = screenWidth < SizeConfig.tabletSize ? 0.9 : 0.45;
 
     return BlocBuilder<DashboardCubit, DashboardState>(
       builder: (context, state) {
@@ -33,7 +34,7 @@ class CustomCarouselSlider extends StatelessWidget {
               options: CarouselOptions(
                 autoPlayCurve: Curves.fastOutSlowIn,
                 autoPlay: true,
-                viewportFraction: 0.9,
+                viewportFraction: viewportFraction,
                 aspectRatio: aspectRatio,
                 initialPage: 0,
                 onPageChanged: (value, v) {
