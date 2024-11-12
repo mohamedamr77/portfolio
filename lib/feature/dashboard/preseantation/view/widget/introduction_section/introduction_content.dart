@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/core/extentions/screen_size.dart';
+import 'package:portfolioapp/core/utils/size_config.dart';
 import '../../../../../../core/shared_widget/global_text.dart';
 import '../../../../../../core/utils/app_color.dart';
 import '../../../../../../core/utils/app_text.dart';
@@ -12,7 +13,10 @@ class IntroductionContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment:
+      MediaQuery.sizeOf(context).width <SizeConfig.mobileSize?
+      CrossAxisAlignment.center :
+      CrossAxisAlignment.start,
       children: [
         GText(
           color: Theme.of(context).primaryColor,
@@ -33,7 +37,9 @@ class IntroductionContent extends StatelessWidget {
           text: AppText.flutter,
         ),
         Padding(
-          padding: EdgeInsets.only(left: 0.14.w),
+          padding:
+          MediaQuery.sizeOf(context).width <SizeConfig.mobileSize?
+          EdgeInsets.zero:EdgeInsets.only(left: 0.14.w),
           child: const CustomBoldText(text: AppText.developer),
         ),
         SizedBox(
