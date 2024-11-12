@@ -3,6 +3,7 @@ import 'package:portfolioapp/core/extentions/screen_size.dart';
 import 'package:portfolioapp/core/shared_widget/custom_text_with_desc.dart';
 import 'package:portfolioapp/core/utils/app_text.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/about_me/skill_column.dart';
+import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/about_me/technical_skill_column.dart';
 
 class AboutMeSection extends StatelessWidget {
   const AboutMeSection({super.key});
@@ -34,7 +35,7 @@ class AboutMeSection extends StatelessWidget {
               Expanded(
                   child: Padding(
                 padding: EdgeInsets.only(right: 0.02.w),
-                child: const SkillColumn(),
+                child: const TechnicalSkillColumn(),
               )),
             ],
           ),

@@ -15,10 +15,13 @@ class CustomTitleWithSlider extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 20),
-          child: GText(
-            content: title,
-            fontSize: 24,
-            fontWeight: FontWeight.w600,
+          child: FittedBox(
+            fit: BoxFit.scaleDown ,
+            child: GText(
+              content: title,
+              fontSize: 24,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
         Slider(

@@ -12,19 +12,19 @@ List<ServiceModel> servicesList = [
   ),
   ServiceModel(
     title: AppText.webDesign,
-    description: "Fantastic design for mobile ",
+    description: "Fantastic design for web ",
     image: AppImages.webIcon,
     onTap: () {},
   ),
   ServiceModel(
     title: AppText.tabletDesign,
-    description: "Fantastic design for mobile ",
+    description: "Fantastic design for tablet ",
     image: AppImages.tablet,
     onTap: () {},
   ),
   ServiceModel(
     title: AppText.desktopDesign,
-    description: "Fantastic design for mobile ",
+    description: "Fantastic design for desktop ",
     image: AppImages.desktop,
     onTap: () {},
   ),

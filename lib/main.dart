@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -11,7 +10,7 @@ import 'core/utils/const_box.dart';
 import 'core/utils/const_variables.dart';
 import 'feature/dashboard/preseantation/view/dashboard_screen.dart';
 import 'feature/dashboard/preseantation/view_model/dashboard_controller/dashboard_cubit.dart';
-import 'package:device_preview/device_preview.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
