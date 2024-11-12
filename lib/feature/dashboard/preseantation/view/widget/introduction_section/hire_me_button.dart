@@ -14,8 +14,8 @@ class HireMeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomElevatedButton(
         btnColor: AppSharedColors.accentOrange,
-        width: MediaQuery.sizeOf(context).width * 0.1,
-        height: 0.07.h,
+        width:100,
+        height: 40,
         borderRadius: BorderRadius.circular(5),
         onPress: SendMessageService.sendEmail,
         child: const FittedBox(

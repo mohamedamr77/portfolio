@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view/widget/tablet/dashboard_tablet_layout.dart';
 import '../../../../../core/shared_widget/adabtive_layout.dart';
+import 'dashboard_small_phone_layout.dart';
 import 'mobile_layout/dashboard_mobile_layout.dart';
 import 'desktop/dashboard_desktop_layout.dart';
 
@@ -27,7 +28,7 @@ class _DashboardBodyState extends State<DashboardBody> {
       desktopLayout: (context) => DashboardDesktopLayout(
         scrollControllerPage: scrollController,
       ),
-      smallPhonesLayout: (context) => const SizedBox(),
+      smallPhonesLayout: (context) => DashboardSmallPhoneLayout(scrollControllerPage: scrollController,),
     );
   }
 }

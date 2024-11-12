@@ -33,7 +33,7 @@ class CustomGridViewMyProject extends StatelessWidget {
 
 int crossAxisCount(BuildContext context) {
   if (MediaQuery.sizeOf(context).width < SizeConfig.mobileSize) {
-    return 2;
+    return 1;
   } else if (MediaQuery.sizeOf(context).width < SizeConfig.tabletSize) {
     return 2;
   } else if (MediaQuery.sizeOf(context).width < SizeConfig.desktopSize) {
@@ -45,7 +45,7 @@ int crossAxisCount(BuildContext context) {
 
 double childAspectRatio(BuildContext context) {
   if (MediaQuery.sizeOf(context).width < SizeConfig.mobileSize) {
-    return 1.1;
+    return 1.7;
   } else if (MediaQuery.sizeOf(context).width < SizeConfig.tabletSize &&
       MediaQuery.sizeOf(context).width > 684) {
     return 1.2;
