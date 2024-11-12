@@ -5,6 +5,8 @@ import 'package:portfolioapp/core/shared_widget/global_text.dart';
 import 'package:portfolioapp/feature/dashboard/data/model/app_bar_service_list.dart';
 import 'package:portfolioapp/feature/dashboard/preseantation/view_model/dashboard_controller/dashboard_cubit.dart';
 
+import '../app_bar/button_swtich_theme.dart';
+
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
     super.key,
@@ -16,27 +18,41 @@ class CustomDrawer extends StatelessWidget {
     return Drawer(
         child: Padding(
       padding: const EdgeInsets.only(top: 20),
-      child: ListView.separated(
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Card(
-                child: ListTile(
-                  onTap: () {
-                    NavigationManager.goBack();
-                    getAppBarServiceList(cubit)[index].onTap?.call();
-                  },
-                  title: GText(
-                      content: getAppBarServiceList(cubit)[index].title,
-                      fontSize: 21),
-                ),
-              ),
-            );
-          },
-          separatorBuilder: (context, index) => const SizedBox(
+      child: Column(
+        children: [
+          ListView.separated(
+            shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Card(
+                    child: ListTile(
+                      onTap: () {
+                        NavigationManager.goBack();
+                        getAppBarServiceList(cubit)[index].onTap?.call();
+                      },
+                      title: GText(
+                          content: getAppBarServiceList(cubit)[index].title,
+                          fontSize: 21),
+                    ),
+                  ),
+                );
+              },
+              separatorBuilder: (context, index) => const SizedBox(
                 height: 10,
               ),
-          itemCount: getAppBarServiceList(cubit).length),
+              itemCount: getAppBarServiceList(cubit).length),
+           const Padding(
+             padding: EdgeInsets.symmetric(horizontal: 10),
+             child: Card(
+               child: ListTile(
+                 title: GText(content: "Dark Mode", fontSize: 21),
+                  trailing : ButtonSwitchTheme(),
+               ),
+             ),
+           )
+        ],
+      )
     ));
   }
 }

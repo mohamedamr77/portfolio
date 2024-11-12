@@ -13,7 +13,6 @@ class CustomAppBarMobileLayout extends StatelessWidget {
         },
         icon: const Icon(Icons.dashboard_customize_rounded),
       ),
-      leading: const ButtonSwitchTheme(),
     );
   }
 }
