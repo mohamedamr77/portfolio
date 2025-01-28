@@ -50,7 +50,6 @@ dependencies:
   carousel_slider: ^5.0.0
   flutter_sms: ^2.3.2
   mailer: ^6.2.0
-  video_player: ^2.1.15
   device_preview: ^1.2.0
 
 

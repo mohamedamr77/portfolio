@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolioapp/core/shared_functions/launch_url.dart';
+import '../../../../../../core/shared_widget/build_shimmer_shape.dart';
 import '../../../../../../core/shared_widget/global_text.dart';
 import '../../../../../../core/utils/app_color.dart';
 import '../../../../data/model/my_project_model.dart';
@@ -11,6 +13,7 @@ class MyProjectItem extends StatelessWidget {
   final MyProjectModel myProjectModel;
   @override
   Widget build(BuildContext context) {
+    debugPrint(myProjectModel.imagePath);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
@@ -19,10 +22,13 @@ class MyProjectItem extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
-            child: Image(
-              image: AssetImage(myProjectModel.imagePath),
+            child: CachedNetworkImage(
               height: 200,
               fit: BoxFit.fill,
+              imageUrl: myProjectModel.imagePath,
+              progressIndicatorBuilder: (context, url, downloadProgress) =>
+              const BuildShimmerShape( height: 200,),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
           ),
           const SizedBox(

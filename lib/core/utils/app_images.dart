@@ -9,14 +9,14 @@ class AppImages {
   static const String moAmrCircleBlack = "assets/images/moamrCircle.jpg";
   static const String moAmrCircleWhite = "assets/images/moamrCircleWhite.jpg";
   static const String webIcon = "assets/images/webIcon.png";
-  static const String quizApp = "assets/images/quiz_app.jpg";
-  static const String cafeApp = "assets/images/cafeApp.jpg";
-  static const String booklyApp = "assets/images/book_app.jpg";
-  static const String todoApp = "assets/images/to_do_app.jpg";
-  static const String currenciesApp = "assets/images/currenciesApp.jpg";
-  static const String newsApp = "assets/images/news_app.jpg";
-  static const String dashboardApp = "assets/images/dashboardApp.jpg";
-  static const String perfectBody = "assets/images/perfectBody2.png";
+  static const String quizApp = "https://i.ibb.co/n8fNXRBX/quiz-app.jpg";
+  static const String cafeApp = "https://i.ibb.co/mF6wM03D/cafeApp.jpg";
+  static const String booklyApp = "https://i.ibb.co/B2qs4MGJ/book-app.jpg";
+  static const String todoApp = "https://i.ibb.co/QvWtjqZw/to-do-app.jpg";
+  static const String currenciesApp = "https://i.ibb.co/DHqfxDf9/currencies-App.jpg";
+  static const String newsApp = "https://i.ibb.co/1fsSKNHp/news-app.jpg";
+  static const String dashboardApp = "https://i.ibb.co/p6bk8KPy/dashboard-App.jpg";
+  static const String perfectBody = "https://i.ibb.co/RfY0hZ1/perfect-Body2.jpg";
   static const String flutterAdvancedCourseMvvMCertificate =
       "assets/images/flutterAdvancedCourseMvvM.jpg";
   static const String flutterPaymentCertificate =
