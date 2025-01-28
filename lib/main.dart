@@ -28,10 +28,7 @@ void main() async {
         create: (context) => PortfolioCubit(),
       ),
     ],
-    child:    DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) => const MyApp(), // Wrap your app
-    ),
+    child:    const MyApp(),
   ));
 }
 
