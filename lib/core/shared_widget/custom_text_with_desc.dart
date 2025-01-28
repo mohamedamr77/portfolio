@@ -33,9 +33,6 @@ class CustomTitleWithDescription extends StatelessWidget {
               TypewriterAnimatedText(title),
 
             ],
-            onTap: () {
-              print("Tap Event");
-            },
           ),
         ),
         const SizedBox(

@@ -1,0 +1,14 @@
+flutter_native_splash:
+  # Default background color (required for Android and iOS, even if unused)
+  color: "#000000"  # Replace with your desired default background color
+
+  # Web-specific configurations
+  color_web: "#000000"  # Background color for web (light mode)
+  image_web: assets/images/splash_test.gif # GIF for web splash screen
+
+  # Optional: Dark mode configurations for web
+  color_dark_web: "#000000"  # Background color for web (dark mode)
+  image_dark_web : assets/images/splash_test.gif # GIF for web splash screen (dark mode)
+
+  # Optional: Adjust the GIF display mode (center, contain, stretch, cover)
+  web_image_mode: center

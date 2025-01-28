@@ -51,6 +51,7 @@ dependencies:
   flutter_sms: ^2.3.2
   mailer: ^6.2.0
   device_preview: ^1.2.0
+  flutter_native_splash: ^2.4.4
 
 
 
