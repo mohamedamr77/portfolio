@@ -1,5 +1,3 @@
-import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -28,7 +26,7 @@ void main() async {
         create: (context) => PortfolioCubit(),
       ),
     ],
-    child:    const MyApp(),
+    child:     const MyApp(),
   ));
 }
 

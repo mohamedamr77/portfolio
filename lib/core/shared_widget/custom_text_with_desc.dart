@@ -1,4 +1,6 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolioapp/core/utils/font_size_responsize.dart';
 
 import 'global_text.dart';
 
@@ -11,7 +13,31 @@ class CustomTitleWithDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        GText(content: title, fontSize: 65, fontWeight: FontWeight.w600),
+        /*
+          color: Theme.of(context).primaryColor,
+              fontSize: getResponsiveFontSize(context: context, fontSize: 65),
+              fontWeight: FontWeight.w600,
+            fontFamily: "Poppins",
+         */
+        DefaultTextStyle(
+          style:  TextStyle(
+            color: Theme.of(context).primaryColor,
+            fontSize: getResponsiveFontSize(context: context, fontSize: 65),
+            fontWeight: FontWeight.w600,
+            fontFamily: "Poppins",
+          ),
+          child: AnimatedTextKit(
+            repeatForever: true,
+            pause: const Duration(seconds: 3),
+            animatedTexts: [
+              TypewriterAnimatedText(title),
+
+            ],
+            onTap: () {
+              print("Tap Event");
+            },
+          ),
+        ),
         const SizedBox(
           height: 20,
         ),
