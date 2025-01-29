@@ -34,7 +34,6 @@ class PortfolioDesktopLayout extends StatelessWidget {
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
         SliverToBoxAdapter(child: ServiceSection(key: cubit.servicesKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
-
         MyProjectSection(key: cubit.projectsKey),
         const SliverToBoxAdapter(child: SpaceBetweenSection(height: 30)),
         SliverToBoxAdapter(
