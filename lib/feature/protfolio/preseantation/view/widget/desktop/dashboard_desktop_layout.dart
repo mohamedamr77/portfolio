@@ -27,6 +27,7 @@ class PortfolioDesktopLayout extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
             child:
+
                 CustomAppBar(appBarServiceList: getAppBarServiceList(cubit))),
         SliverToBoxAdapter(child: IntroductionSection(key: cubit.homeKey)),
         const SliverToBoxAdapter(child: SpaceBetweenSection()),
